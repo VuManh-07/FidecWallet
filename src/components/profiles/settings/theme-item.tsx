@@ -2,12 +2,17 @@ import React from 'react';
 
 import type { OptionType } from '@/components/ui';
 import { Options, useModal } from '@/components/ui';
+import { Support24h as Support24hIcon } from '@/components/ui/icons';
 import type { ColorSchemeType } from '@/lib';
 import { translate, useSelectedTheme } from '@/lib';
 
-import { Item } from './item';
+import { Item } from '../item';
 
-export const ThemeItem = () => {
+type Props = {
+  iconColor?: string;
+};
+
+export const ThemeItem = ({ iconColor }: Props) => {
   const { selectedTheme, setSelectedTheme } = useSelectedTheme();
   const modal = useModal();
 
@@ -36,9 +41,11 @@ export const ThemeItem = () => {
   return (
     <>
       <Item
-        text="settings.theme.title"
+        title="settings.theme.title"
         value={theme?.label}
         onPress={modal.present}
+        isValueOpacity={true}
+        icon={<Support24hIcon color={iconColor} width={40} height={40} />}
       />
       <Options
         ref={modal.ref}

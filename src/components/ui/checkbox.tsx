@@ -14,10 +14,10 @@ import { Text } from './text';
 
 const SIZE = 20;
 const WIDTH = 50;
-const HEIGHT = 28;
-const THUMB_HEIGHT = 22;
-const THUMB_WIDTH = 22;
-const THUMB_OFFSET = 4;
+const HEIGHT = 24;
+const THUMB_HEIGHT = 14;
+const THUMB_WIDTH = 14;
+const THUMB_OFFSET = 3;
 
 export interface RootProps extends Omit<PressableProps, 'onPress'> {
   onChange: (checked: boolean) => void;

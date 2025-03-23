@@ -1,0 +1,51 @@
+Cấu trúc thư mục và tệp chính:
+
+.github/: Chứa các workflows của GitHub Actions để tự động hóa các quy trình như kiểm thử, xây dựng và triển khai ứng dụng.​
+
+.husky/: Chứa các hook của Husky để quản lý các git hooks, giúp thực thi các lệnh kiểm tra mã nguồn trước khi commit hoặc push.​
+
+.maestro/: Chứa các kịch bản kiểm thử tự động cho giao diện người dùng, giúp đảm bảo chất lượng và tính nhất quán của UI.​
+
+.vscode/: Chứa các cài đặt và đề xuất tiện ích mở rộng cho Visual Studio Code, giúp cải thiện trải nghiệm phát triển.​
+
+mocks/: Chứa các tệp mock cho việc kiểm thử, giúp giả lập các mô-đun hoặc thành phần trong quá trình kiểm thử.​
+
+android/ và ios/: Chứa mã nguồn và cấu hình cụ thể cho các nền tảng Android và iOS.​
+
+assets/: Chứa các tài nguyên như hình ảnh, phông chữ và các tệp tĩnh khác được sử dụng trong ứng dụng.​
+
+cli/: Chứa các công cụ dòng lệnh tùy chỉnh hỗ trợ trong quá trình phát triển.​
+
+docs/: Chứa tài liệu hướng dẫn và thông tin liên quan đến dự án.​
+
+prompts/: Chứa các tệp cấu hình cho các công cụ tạo dự án, giúp tùy chỉnh quá trình khởi tạo dự án mới.​
+
+scripts/: Chứa các tập lệnh hỗ trợ các tác vụ phát triển như xây dựng, kiểm thử và triển khai.​
+
+src/: Thư mục chính chứa mã nguồn của ứng dụng, bao gồm các thành phần React, hooks, context, và các tệp liên quan khác.​
+
+.env.development, .env.production, .env.staging: Các tệp cấu hình biến môi trường cho các môi trường phát triển, sản xuất và thử nghiệm.​
+
+.eslintrc.js và .eslintignore: Tệp cấu hình cho ESLint, công cụ phân tích mã nguồn để đảm bảo tuân thủ các quy tắc mã hóa.​
+
+.gitignore: Xác định các tệp và thư mục sẽ bị bỏ qua bởi Git, không được theo dõi trong hệ thống kiểm soát phiên bản.​
+
+.npmrc: Tệp cấu hình cho npm, quản lý các cài đặt liên quan đến npm.​
+
+.prettierrc.js: Tệp cấu hình cho Prettier, công cụ định dạng mã nguồn để duy trì sự nhất quán trong phong cách mã hóa.​
+
+LICENSE: Tệp giấy phép của dự án, xác định các quyền và hạn chế liên quan đến việc sử dụng mã nguồn.​
+
+README.md: Tệp hướng dẫn chính của dự án, cung cấp thông tin tổng quan và hướng dẫn sử dụng.​
+
+app.config.ts: Tệp cấu hình cho ứng dụng, thường được sử dụng để định nghĩa các thông số cấu hình cho Expo.​
+
+babel.config.js: Tệp cấu hình cho Babel, công cụ chuyển đổi mã ES6+ thành mã tương thích với các môi trường JavaScript hiện tại.​
+
+commitlint.config.js: Tệp cấu hình cho Commitlint, công cụ kiểm tra thông điệp commit để đảm bảo tuân thủ các quy ước nhất định.​
+
+eas.json: Tệp cấu hình cho Expo Application Services (EAS), quản lý các cài đặt liên quan đến xây dựng và triển khai ứng dụng.​
+
+env.js: Tệp quản lý các biến môi trường trong dự án.​
+
+global.css: Tệp CSS toàn cục, định nghĩa các kiểu dáng chung cho ứng dụng.

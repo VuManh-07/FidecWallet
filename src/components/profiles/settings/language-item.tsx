@@ -2,13 +2,18 @@ import * as React from 'react';
 
 import type { OptionType } from '@/components/ui';
 import { Options, useModal } from '@/components/ui';
+import { FaceId as FaceIdIcon } from '@/components/ui/icons';
 import { useSelectedLanguage } from '@/lib';
 import { translate } from '@/lib';
 import type { Language } from '@/lib/i18n/resources';
 
-import { Item } from './item';
+import { Item } from '../item';
 
-export const LanguageItem = () => {
+type Props = {
+  iconColor?: string;
+};
+
+export const LanguageItem = ({ iconColor }: Props) => {
   const { language, setLanguage } = useSelectedLanguage();
   const modal = useModal();
   const onSelect = React.useCallback(
@@ -22,7 +27,7 @@ export const LanguageItem = () => {
   const langs = React.useMemo(
     () => [
       { label: translate('settings.english'), value: 'en' },
-      { label: translate('settings.arabic'), value: 'ar' },
+      { label: translate('settings.vietnamese'), value: 'vn' },
     ],
     []
   );
@@ -35,8 +40,10 @@ export const LanguageItem = () => {
   return (
     <>
       <Item
-        text="settings.language"
-        value={selectedLanguage?.label}
+        icon={<FaceIdIcon color={iconColor} width={40} height={40} />}
+        title="settings.language"
+        value={selectedLanguage?.label ?? 'English'}
+        isValueOpacity={true}
         onPress={modal.present}
       />
       <Options

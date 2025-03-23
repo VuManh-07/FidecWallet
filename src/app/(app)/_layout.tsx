@@ -51,10 +51,31 @@ export default function TabLayout() {
           tabBarButtonTestID: 'style-tab',
         }}
       />
+
       <Tabs.Screen
-        name="settings"
+        name="market"
         options={{
-          title: 'Settings',
+          title: 'Market',
+          headerShown: false,
+          tabBarIcon: ({ color }) => <StyleIcon color={color} />,
+          tabBarButtonTestID: 'market-tab',
+        }}
+      />
+
+      <Tabs.Screen
+        name="browser"
+        options={{
+          title: 'Browser',
+          headerShown: false,
+          tabBarIcon: ({ color }) => <StyleIcon color={color} />,
+          tabBarButtonTestID: 'browser-tab',
+        }}
+      />
+
+      <Tabs.Screen
+        name="profile"
+        options={{
+          title: 'Profile',
           headerShown: false,
           tabBarIcon: ({ color }) => <SettingsIcon color={color} />,
           tabBarButtonTestID: 'settings-tab',

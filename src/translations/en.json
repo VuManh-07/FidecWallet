@@ -1,11 +1,39 @@
 {
   "onboarding": {
-    "message": "Welcome to obytes app site"
+    "message": "Welcome to Fidec Wallet app site"
+  },
+  "profiles": {
+    "2fa": "2FA",
+    "allow_face_id": "Allow Face ID",
+    "change_entrance_code": "Change entrance code",
+    "code_to_enter": "Code to enter into the app",
+    "device_management": "Device Management",
+    "email_address": "Email address",
+    "fingerprint": "Fingerprint",
+    "information": "Information",
+    "logout": "Log Out",
+    "manage": "Manage",
+    "manage_card": "Manage Card",
+    "manage_posted": "Manage Posted",
+    "manage_wallet": "Manage Wallet",
+    "other": "Other",
+    "phone_number": "Phone number",
+    "pin_reset_card_lock": "PIN, Reset & Card Lock",
+    "post_manager_posted": "Post Manager Posted",
+    "recent_login_equipment": "Recent login equipment management",
+    "settings": "Settings",
+    "share": "Share",
+    "support_24_7": "Support 24/7",
+    "supported_by_ai": "Supported by AI staff 24/7",
+    "title": "Profile",
+    "use_face_id": "Use Face ID to enter into the app",
+    "use_fingerprint": "Use Fingerprint to enter into the app",
+    "wallet_connect": "Wallet Connect",
+    "your_name": "Your name"
   },
   "settings": {
     "about": "About",
     "app_name": "App Name",
-    "arabic": "Arabic",
     "english": "English",
     "generale": "General",
     "github": "Github",
@@ -27,7 +55,8 @@
     },
     "title": "Settings",
     "version": "Version",
+    "vietnamese": "Vietnamese",
     "website": "Website"
   },
-  "welcome": "Welcome to obytes app site"
+  "welcome": "Welcome to Fidec Wallet app site"
 }

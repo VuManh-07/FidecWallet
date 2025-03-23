@@ -5,6 +5,7 @@ import { Options, useModal } from '@/components/ui';
 import { Support24h as Support24hIcon } from '@/components/ui/icons';
 import type { ColorSchemeType } from '@/lib';
 import { translate, useSelectedTheme } from '@/lib';
+import { getSizeIconInProfile } from '@/lib/helps';
 
 import { Item } from '../item';
 
@@ -13,6 +14,7 @@ type Props = {
 };
 
 export const ThemeItem = ({ iconColor }: Props) => {
+  const sizeIcon = getSizeIconInProfile();
   const { selectedTheme, setSelectedTheme } = useSelectedTheme();
   const modal = useModal();
 
@@ -54,7 +56,13 @@ export const ThemeItem = ({ iconColor }: Props) => {
         value={theme?.label}
         onPress={modal.present}
         isValueOpacity={true}
-        icon={<Support24hIcon color={iconColor} width={40} height={40} />}
+        icon={
+          <Support24hIcon
+            color={iconColor}
+            width={sizeIcon}
+            height={sizeIcon}
+          />
+        }
       />
       <Options
         ref={modal.ref}

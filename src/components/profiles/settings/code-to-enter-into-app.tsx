@@ -2,6 +2,7 @@ import * as React from 'react';
 
 import { Code as CodeIcon } from '@/components/ui/icons';
 import { translate } from '@/lib';
+import { getSizeIconInProfile } from '@/lib/helps';
 
 import { Item } from '../item';
 
@@ -10,9 +11,10 @@ type Props = {
 };
 
 export const CodeToEnterIntoApp = ({ iconColor }: Props) => {
+  const sizeIcon = getSizeIconInProfile();
   return (
     <Item
-      icon={<CodeIcon color={iconColor} width={40} height={40} />}
+      icon={<CodeIcon color={iconColor} width={sizeIcon} height={sizeIcon} />}
       title="profiles.settings.code_to_enter"
       value={translate('profiles.settings.code_to_enter_desc')}
       isValueOpacity={true}

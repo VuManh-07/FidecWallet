@@ -1,6 +1,7 @@
 import * as React from 'react';
 
 import { Email as EmailIcon } from '@/components/ui/icons';
+import { getSizeIconInProfile } from '@/lib/helps';
 
 import { Item } from '../item';
 
@@ -11,11 +12,11 @@ type Props = {
 export const EmailItem = ({ iconColor }: Props) => {
   // const name = getEmailUser();
   const email = 'ducmanh@gmail.com';
-
+  const sizeIcon = getSizeIconInProfile();
   return (
     <Item
       title="profiles.information.email"
-      icon={<EmailIcon color={iconColor} width={40} height={40} />}
+      icon={<EmailIcon color={iconColor} width={sizeIcon} height={sizeIcon} />}
       value={email}
       isShowIconVerified={true}
       isVerified={false}

@@ -1,6 +1,7 @@
 import * as React from 'react';
 
 import { User as UserIcon } from '@/components/ui/icons';
+import { getSizeIconInProfile } from '@/lib/helps';
 
 import { Item } from '../item';
 
@@ -11,10 +12,10 @@ type Props = {
 export const NameItem = ({ iconColor }: Props) => {
   // const name = getNameUser();
   const name = 'Duc Manh';
-
+  const sizeIcon = getSizeIconInProfile();
   return (
     <Item
-      icon={<UserIcon color={iconColor} width={40} height={40} />}
+      icon={<UserIcon color={iconColor} width={sizeIcon} height={sizeIcon} />}
       title="profiles.information.name"
       value={name}
       isTitleOpacity={true}

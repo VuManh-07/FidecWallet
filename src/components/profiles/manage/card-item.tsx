@@ -2,6 +2,7 @@ import * as React from 'react';
 
 import { Card as CardIcon } from '@/components/ui/icons';
 import { translate } from '@/lib';
+import { getSizeIconInProfile } from '@/lib/helps';
 
 import { Item } from '../item';
 
@@ -10,9 +11,10 @@ type Props = {
 };
 
 export const CardItem = ({ iconColor }: Props) => {
+  const sizeIcon = getSizeIconInProfile();
   return (
     <Item
-      icon={<CardIcon color={iconColor} width={40} height={40} />}
+      icon={<CardIcon color={iconColor} width={sizeIcon} height={sizeIcon} />}
       title="profiles.manage.card"
       value={translate('profiles.manage.card_desc')}
       isValueOpacity={true}

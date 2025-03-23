@@ -2,6 +2,7 @@ import * as React from 'react';
 
 import { FaceId as FaceIdIcon } from '@/components/ui/icons';
 import { translate } from '@/lib';
+import { getSizeIconInProfile } from '@/lib/helps';
 
 import { Item } from '../item';
 
@@ -10,11 +11,13 @@ type Props = {
 };
 
 export const Fingerprint = ({ iconColor }: Props) => {
+  const sizeIcon = getSizeIconInProfile();
+
   const [isEnabledFingerprint, setIsEnabledFingerprint] = React.useState(false);
 
   return (
     <Item
-      icon={<FaceIdIcon color={iconColor} width={40} height={40} />}
+      icon={<FaceIdIcon color={iconColor} width={sizeIcon} height={sizeIcon} />}
       title="profiles.settings.fingerprint"
       value={translate('profiles.settings.fingerprint_desc')}
       isValueOpacity={true}

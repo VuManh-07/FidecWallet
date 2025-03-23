@@ -13,8 +13,8 @@ export const TwoFaItem = ({ iconColor }: Props) => {
   return (
     <Item
       icon={<TwoFaIcon color={iconColor} width={40} height={40} />}
-      title="profiles.2fa"
-      value={translate('profiles.2fa')}
+      title="profiles.settings.2fa"
+      value={translate('profiles.settings.2fa_desc')}
       isValueOpacity={true}
       onPress={() => {}}
     />

@@ -4,9 +4,11 @@ import React, { useCallback, useEffect } from 'react';
 
 import { Pressable, Text } from '@/components/ui';
 import {
+  Browser as BrowserIcon,
   Feed as FeedIcon,
-  Settings as SettingsIcon,
+  Market as MarketIcon,
   Style as StyleIcon,
+  UserSquare as UserSquareIcon,
 } from '@/components/ui/icons';
 import { useAuth, useIsFirstTime } from '@/lib';
 
@@ -57,7 +59,7 @@ export default function TabLayout() {
         options={{
           title: 'Market',
           headerShown: false,
-          tabBarIcon: ({ color }) => <StyleIcon color={color} />,
+          tabBarIcon: ({ color }) => <MarketIcon color={color} />,
           tabBarButtonTestID: 'market-tab',
         }}
       />
@@ -67,7 +69,7 @@ export default function TabLayout() {
         options={{
           title: 'Browser',
           headerShown: false,
-          tabBarIcon: ({ color }) => <StyleIcon color={color} />,
+          tabBarIcon: ({ color }) => <BrowserIcon color={color} />,
           tabBarButtonTestID: 'browser-tab',
         }}
       />
@@ -77,8 +79,8 @@ export default function TabLayout() {
         options={{
           title: 'Profile',
           headerShown: false,
-          tabBarIcon: ({ color }) => <SettingsIcon color={color} />,
-          tabBarButtonTestID: 'settings-tab',
+          tabBarIcon: ({ color }) => <UserSquareIcon color={color} />,
+          tabBarButtonTestID: 'profile-tab',
         }}
       />
     </Tabs>

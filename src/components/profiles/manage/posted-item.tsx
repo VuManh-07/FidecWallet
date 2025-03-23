@@ -13,8 +13,8 @@ export const PostedItem = ({ iconColor }: Props) => {
   return (
     <Item
       icon={<PostedIcon color={iconColor} width={40} height={40} />}
-      title="profiles.manage_posted"
-      value={translate('profiles.manage_posted')}
+      title="profiles.manage.posted"
+      value={translate('profiles.manage.posted_desc')}
       isValueOpacity={true}
       onPress={() => {}}
     />

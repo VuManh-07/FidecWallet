@@ -26,8 +26,8 @@ export const LanguageItem = ({ iconColor }: Props) => {
 
   const langs = React.useMemo(
     () => [
-      { label: translate('settings.english'), value: 'en' },
-      { label: translate('settings.vietnamese'), value: 'vn' },
+      { label: translate('profiles.settings.english'), value: 'en' },
+      { label: translate('profiles.settings.vietnamese'), value: 'vn' },
     ],
     []
   );
@@ -41,8 +41,8 @@ export const LanguageItem = ({ iconColor }: Props) => {
     <>
       <Item
         icon={<FaceIdIcon color={iconColor} width={40} height={40} />}
-        title="settings.language"
-        value={selectedLanguage?.label ?? 'English'}
+        title="profiles.settings.language"
+        value={selectedLanguage?.label}
         isValueOpacity={true}
         onPress={modal.present}
       />

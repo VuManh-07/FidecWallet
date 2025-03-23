@@ -14,15 +14,17 @@ export const EmailItem = ({ iconColor }: Props) => {
 
   return (
     <Item
-      title="profiles.email_address"
+      title="profiles.information.email"
       icon={<EmailIcon color={iconColor} width={40} height={40} />}
       value={email}
       isShowIconVerified={true}
       isVerified={false}
       isTitleOpacity={true}
       onPress={() => {}}
-      titleSize="xs"
-      valueSize="sm"
+      titleSize="sm"
+      valueSize="xs"
+      responsiveTitle="sm:text-sm md:text-base lg:text-lg xl:text-xl"
+      responsiveValue="sm:text-xs md:text-sm lg:text-base xl:text-lg"
     />
   );
 };

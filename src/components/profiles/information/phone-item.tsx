@@ -14,15 +14,17 @@ export const PhoneItem = ({ iconColor }: Props) => {
 
   return (
     <Item
-      title="profiles.phone_number"
+      title="profiles.information.phone"
       icon={<PhoneIcon color={iconColor} width={40} height={40} />}
       value={phone}
       isShowIconVerified={true}
       isVerified={false}
       isTitleOpacity={true}
       onPress={() => {}}
-      titleSize="xs"
-      valueSize="sm"
+      titleSize="sm"
+      valueSize="xs"
+      responsiveTitle="sm:text-sm md:text-base lg:text-lg xl:text-xl"
+      responsiveValue="sm:text-xs md:text-sm lg:text-base xl:text-lg"
     />
   );
 };

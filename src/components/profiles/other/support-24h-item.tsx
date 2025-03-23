@@ -13,8 +13,8 @@ export const Support24hItem = ({ iconColor }: Props) => {
   return (
     <Item
       icon={<Support24hIcon color={iconColor} width={40} height={40} />}
-      title="profiles.support_24_7"
-      value={translate('profiles.support_24_7')}
+      title="profiles.other.support_24_7"
+      value={translate('profiles.other.support_24_7_desc')}
       isValueOpacity={true}
       onPress={() => {}}
     />

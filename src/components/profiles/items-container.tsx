@@ -13,7 +13,7 @@ export const ItemsContainer = ({ children, title }: Props) => {
     <>
       {title && (
         <Text
-          className="mx-2 pb-2 pt-4 text-lg font-bold dark:text-white"
+          className="pb-2 pt-4 text-lg font-bold dark:text-white"
           tx={title}
         />
       )}

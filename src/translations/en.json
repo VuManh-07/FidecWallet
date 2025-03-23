@@ -3,60 +3,54 @@
     "message": "Welcome to Fidec Wallet app site"
   },
   "profiles": {
-    "2fa": "2FA",
-    "allow_face_id": "Allow Face ID",
-    "change_entrance_code": "Change entrance code",
-    "code_to_enter": "Code to enter into the app",
-    "device_management": "Device Management",
-    "email_address": "Email address",
-    "fingerprint": "Fingerprint",
-    "information": "Information",
-    "logout": "Log Out",
-    "manage": "Manage",
-    "manage_card": "Manage Card",
-    "manage_posted": "Manage Posted",
-    "manage_wallet": "Manage Wallet",
-    "other": "Other",
-    "phone_number": "Phone number",
-    "pin_reset_card_lock": "PIN, Reset & Card Lock",
-    "post_manager_posted": "Post Manager Posted",
-    "recent_login_equipment": "Recent login equipment management",
-    "settings": "Settings",
-    "share": "Share",
-    "support_24_7": "Support 24/7",
-    "supported_by_ai": "Supported by AI staff 24/7",
-    "title": "Profile",
-    "use_face_id": "Use Face ID to enter into the app",
-    "use_fingerprint": "Use Fingerprint to enter into the app",
-    "wallet_connect": "Wallet Connect",
-    "your_name": "Your name"
-  },
-  "settings": {
-    "about": "About",
-    "app_name": "App Name",
-    "english": "English",
-    "generale": "General",
-    "github": "Github",
-    "language": "Language",
-    "links": "Links",
-    "logout": "Logout",
-    "more": "More",
-    "privacy": "Privacy Policy",
-    "rate": "Rate",
-    "share": "Share",
-    "support": "Support",
-    "support_us": "Support Us",
-    "terms": "Terms of Service",
-    "theme": {
-      "dark": "Dark",
-      "light": "Light",
-      "system": "System",
-      "title": "Theme"
+    "information": {
+      "email": "Email",
+      "name": "Name",
+      "phone": "Phone",
+      "title": "Information"
     },
-    "title": "Settings",
-    "version": "Version",
-    "vietnamese": "Vietnamese",
-    "website": "Website"
+    "manage": {
+      "card": "Card",
+      "card_desc": "PIN, RESET & Card Lock",
+      "device_management": "Device Management",
+      "device_management_desc": "Recent login equipment management",
+      "posted": "Posted",
+      "posted_desc": "Post Manager Posted",
+      "title": "Manage",
+      "walletconnect": "Wallet Connect",
+      "walletconnect_desc": "Wallet Connect"
+    },
+    "other": {
+      "logout": "Logout",
+      "logout_desc": "Logout",
+      "share": "Share",
+      "share_desc": "Share Fidec Wallet app!",
+      "support_24_7": "Support 24/7",
+      "support_24_7_desc": "Supported by AI staff 24/7",
+      "title": "Other"
+    },
+    "settings": {
+      "2fa": "2FA",
+      "2fa_desc": "Security",
+      "allow_face_id": "Allow Face ID",
+      "allow_face_id_desc": "Use Face ID to enter into the app",
+      "code_to_enter": "Code to enter into the app",
+      "code_to_enter_desc": "Change entrance code",
+      "english": "English",
+      "fingerprint": "Fingerprint",
+      "fingerprint_desc": "Use Fingerprint to enter into the app",
+      "language": "Language",
+      "theme": {
+        "dark": "Dark",
+        "light": "Light",
+        "system": "System",
+        "title": "Theme"
+      },
+      "title": "Settings",
+      "version": "Version",
+      "vietnamese": "Vietnamese"
+    },
+    "title": "Profile"
   },
   "welcome": "Welcome to Fidec Wallet app site"
 }

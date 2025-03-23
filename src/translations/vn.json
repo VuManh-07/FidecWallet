@@ -1,62 +1,56 @@
 {
   "onboarding": {
-    "message": "Chào mừng bạn đến với ứng dụng ví Fidec!"
+    "message": "Chào mừng bạn đến với ứng dụng Fidec Wallet"
   },
   "profiles": {
-    "2fa": "Xác thực 2 lớp",
-    "allow_face_id": "Cho phép Face ID",
-    "change_entrance_code": "Thay đổi mã vào",
-    "code_to_enter": "Mã vào ứng dụng",
-    "device_management": "Quản lý thiết bị",
-    "email_address": "Địa chỉ email",
-    "fingerprint": "Vân tay",
-    "information": "Thông tin",
-    "logout": "Đăng xuất",
-    "manage": "Quản lý",
-    "manage_card": "Quản lý thẻ",
-    "manage_posted": "Quản lý bài đăng",
-    "manage_wallet": "Quản lý ví",
-    "other": "Khác",
-    "phone_number": "Số điện thoại",
-    "pin_reset_card_lock": "Mã PIN, Cài lại & Khóa thẻ",
-    "post_manager_posted": "Bài đăng đã quản lý",
-    "recent_login_equipment": "Quản lý thiết bị đăng nhập gần đây",
-    "settings": "Cài đặt",
-    "share": "Chia sẻ",
-    "support_24_7": "Hỗ trợ 24/7",
-    "supported_by_ai": "Được hỗ trợ bởi AI 24/7",
-    "title": "Hồ sơ",
-    "use_face_id": "Dùng Face ID để vào ứng dụng",
-    "use_fingerprint": "Dùng vân tay để vào ứng dụng",
-    "wallet_connect": "Kết nối ví",
-    "your_name": "Tên của bạn"
-  },
-  "settings": {
-    "about": "Giới thiệu",
-    "app_name": "Fidec",
-    "english": "Tiếng Anh",
-    "generale": "Chung",
-    "github": "Github",
-    "language": "Ngôn ngữ",
-    "links": "Liên kết",
-    "logout": "Đăng xuất",
-    "more": "Xem thêm",
-    "privacy": "Chính sách quyền riêng tư",
-    "rate": "Đánh giá",
-    "share": "Chia sẻ",
-    "support": "Hỗ trợ",
-    "support_us": "Ủng hộ chúng tôi",
-    "terms": "Điều khoản dịch vụ",
-    "theme": {
-      "dark": "Tối",
-      "light": "Sáng",
-      "system": "Hệ thống",
-      "title": "Chủ đề"
+    "information": {
+      "email": "Email",
+      "name": "Tên",
+      "phone": "Số điện thoại",
+      "title": "Thông tin"
     },
-    "title": "Cài đặt",
-    "version": "Phiên bản",
-    "vietnamese": "Tiếng Việt",
-    "website": "Trang web"
+    "manage": {
+      "card": "Thẻ",
+      "card_desc": "Mã PIN, Đặt lại & Khóa thẻ",
+      "device_management": "Quản lý thiết bị",
+      "device_management_desc": "Quản lý thiết bị đăng nhập gần đây",
+      "posted": "Đã đăng",
+      "posted_desc": "Quản lý bài đăng",
+      "title": "Quản lý",
+      "walletconnect": "Kết nối ví",
+      "walletconnect_desc": "Kết nối ví"
+    },
+    "other": {
+      "logout": "Đăng xuất",
+      "logout_desc": "Đăng xuất",
+      "share": "Chia sẻ",
+      "share_desc": "Chia sẻ ứng dụng Fidec Wallet!",
+      "support_24_7": "Hỗ trợ 24/7",
+      "support_24_7_desc": "Được hỗ trợ bởi nhân viên AI 24/7",
+      "title": "Khác"
+    },
+    "settings": {
+      "2fa": "Xác thực hai yếu tố",
+      "2fa_desc": "Bảo mật",
+      "allow_face_id": "Cho phép Face ID",
+      "allow_face_id_desc": "Sử dụng Face ID để đăng nhập",
+      "code_to_enter": "Mã để nhập vào ứng dụng",
+      "code_to_enter_desc": "Thay đổi mã đăng nhập",
+      "english": "Tiếng Anh",
+      "fingerprint": "Dấu vân tay",
+      "fingerprint_desc": "Sử dụng dấu vân tay để đăng nhập",
+      "language": "Ngôn ngữ",
+      "theme": {
+        "dark": "Tối",
+        "light": "Sáng",
+        "system": "Hệ thống",
+        "title": "Chủ đề"
+      },
+      "title": "Cài đặt",
+      "version": "Phiên bản",
+      "vietnamese": "Tiếng Việt"
+    },
+    "title": "Hồ sơ"
   },
-  "welcome": "Chào mừng bạn đến với trang ứng dụng ví Fidec"
+  "welcome": "Chào mừng bạn đến với ứng dụng Fidec Wallet"
 }

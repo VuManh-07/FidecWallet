@@ -26,9 +26,18 @@ export const ThemeItem = ({ iconColor }: Props) => {
 
   const themes = React.useMemo(
     () => [
-      { label: `${translate('settings.theme.dark')} 🌙`, value: 'dark' },
-      { label: `${translate('settings.theme.light')} 🌞`, value: 'light' },
-      { label: `${translate('settings.theme.system')} ⚙️`, value: 'system' },
+      {
+        label: `${translate('profiles.settings.theme.dark')} 🌙`,
+        value: 'dark',
+      },
+      {
+        label: `${translate('profiles.settings.theme.light')} 🌞`,
+        value: 'light',
+      },
+      {
+        label: `${translate('profiles.settings.theme.system')} ⚙️`,
+        value: 'system',
+      },
     ],
     []
   );
@@ -41,7 +50,7 @@ export const ThemeItem = ({ iconColor }: Props) => {
   return (
     <>
       <Item
-        title="settings.theme.title"
+        title="profiles.settings.theme.title"
         value={theme?.label}
         onPress={modal.present}
         isValueOpacity={true}

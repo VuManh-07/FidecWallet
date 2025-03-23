@@ -44,13 +44,13 @@ export default function Profiles() {
             {translate('profiles.title')}
           </Text>
 
-          <ItemsContainer title="profiles.information">
+          <ItemsContainer title="profiles.information.title">
             <NameItem iconColor={iconColor} />
             <PhoneItem iconColor={iconColor} />
             <EmailItem iconColor={iconColor} />
           </ItemsContainer>
 
-          <ItemsContainer title="profiles.settings">
+          <ItemsContainer title="profiles.settings.title">
             <TwoFaItem iconColor={iconColor} />
             <CodeToEnterIntoApp iconColor={iconColor} />
             <AllowFaceId iconColor={iconColor} />
@@ -59,14 +59,14 @@ export default function Profiles() {
             <ThemeItem iconColor={iconColor} />
           </ItemsContainer>
 
-          <ItemsContainer title="profiles.manage">
+          <ItemsContainer title="profiles.manage.title">
             <PostedItem iconColor={iconColor} />
             <CardItem iconColor={iconColor} />
             <WalletconnectItem iconColor={iconColor} />
             <DeviceItem iconColor={iconColor} />
           </ItemsContainer>
 
-          <ItemsContainer title="profiles.other">
+          <ItemsContainer title="profiles.other.title">
             <Support24hItem iconColor={iconColor} />
             <ShareItem iconColor={iconColor} />
             <LogoutItem onPress={signOut} />

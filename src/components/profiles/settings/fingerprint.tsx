@@ -15,8 +15,8 @@ export const Fingerprint = ({ iconColor }: Props) => {
   return (
     <Item
       icon={<FaceIdIcon color={iconColor} width={40} height={40} />}
-      title="profiles.fingerprint"
-      value={translate('profiles.fingerprint')}
+      title="profiles.settings.fingerprint"
+      value={translate('profiles.settings.fingerprint_desc')}
       isValueOpacity={true}
       isSwitch={true}
       switchValue={isEnabledFingerprint}

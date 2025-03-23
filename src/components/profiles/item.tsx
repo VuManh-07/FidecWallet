@@ -18,6 +18,8 @@ type ItemProps = {
   isVerified?: boolean;
   titleSize?: 'xs' | 'sm' | 'base' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl';
   valueSize?: 'xs' | 'sm' | 'base' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl';
+  responsiveTitle?: string;
+  responsiveValue?: string;
   titleFont?:
     | 'thin'
     | 'light'
@@ -48,8 +50,10 @@ export const Item = ({
   isValueOpacity = false,
   isShowIconVerified = false,
   isVerified = true,
-  titleSize = 'sm',
-  valueSize = 'xs',
+  titleSize = 'xs',
+  valueSize = 'sm',
+  responsiveTitle,
+  responsiveValue,
   titleFont = 'bold',
   valueFont = 'normal',
 }: ItemProps) => {
@@ -63,14 +67,16 @@ export const Item = ({
     <Pressable
       onPress={onPress}
       disabled={!onPress}
-      className="flex-row items-center justify-between rounded-lg px-3 py-2 dark:bg-neutral-900"
+      className="flex-row items-center justify-between rounded-lg p-2 dark:bg-neutral-900 sm:p-3 md:p-4 lg:p-5 xl:p-6"
     >
       <View className="flex-row items-center space-x-3">
         {icon && <View className="mr-1">{icon}</View>}
         <View>
           <View className="flex-row items-center space-x-1">
             <Text
-              className={`text-${titleSize} font-${titleFont} mr-1 dark:text-white ${isTitleOpacity ? 'opacity-50' : ''}`}
+              className={`text-${titleSize} ${responsiveTitle} font-${titleFont} mr-1 dark:text-white
+                sm:text-xs md:text-sm lg:text-base xl:text-lg
+                ${isTitleOpacity ? 'opacity-50' : ''}`}
               tx={title}
             />
             {isShowIconVerified && (
@@ -84,7 +90,9 @@ export const Item = ({
           </View>
           {value && (
             <Text
-              className={`text-${valueSize} font-${valueFont} dark:text-white ${isValueOpacity ? 'opacity-50' : ''}`}
+              className={`text-${valueSize} ${responsiveValue} font-${valueFont} dark:text-white 
+                sm:text-sm md:text-base lg:text-lg xl:text-xl
+                ${isValueOpacity ? 'opacity-50' : ''}`}
             >
               {value}
             </Text>

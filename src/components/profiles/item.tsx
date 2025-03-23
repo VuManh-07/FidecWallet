@@ -52,8 +52,8 @@ export const Item = ({
   isVerified = true,
   titleSize = 'xs',
   valueSize = 'sm',
-  responsiveTitle,
-  responsiveValue,
+  responsiveTitle = 'sm:text-base md:text-lg lg:text-xl xl:text-2xl',
+  responsiveValue = 'sm:text-sm md:text-base lg:text-lg xl:text-xl',
   titleFont = 'bold',
   valueFont = 'normal',
 }: ItemProps) => {
@@ -75,7 +75,6 @@ export const Item = ({
           <View className="flex-row items-center space-x-1">
             <Text
               className={`text-${titleSize} ${responsiveTitle} font-${titleFont} mr-1 dark:text-white
-                sm:text-xs md:text-sm lg:text-base xl:text-lg
                 ${isTitleOpacity ? 'opacity-50' : ''}`}
               tx={title}
             />
@@ -91,7 +90,6 @@ export const Item = ({
           {value && (
             <Text
               className={`text-${valueSize} ${responsiveValue} font-${valueFont} dark:text-white 
-                sm:text-sm md:text-base lg:text-lg xl:text-xl
                 ${isValueOpacity ? 'opacity-50' : ''}`}
             >
               {value}

@@ -24,7 +24,7 @@ export const EmailItem = ({ iconColor }: Props) => {
       titleSize="sm"
       valueSize="xs"
       responsiveTitle="sm:text-sm md:text-base lg:text-lg xl:text-xl"
-      responsiveValue="sm:text-xs md:text-sm lg:text-base xl:text-lg"
+      responsiveValue="sm:text-base md:text-lg lg:text-xl xl:text-2xl"
     />
   );
 };

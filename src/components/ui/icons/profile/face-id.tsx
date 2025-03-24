@@ -4,10 +4,10 @@ import type { SvgProps } from 'react-native-svg';
 import Svg, { ClipPath, Defs, G, Path, Rect } from 'react-native-svg';
 
 import { isRTL } from '@/lib';
-import { WIDTH } from '@/lib/hooks/use-responsive-dimensions';
+import { getSize } from '@/lib/hooks/use-responsive-dimensions';
 
 export const FaceId = ({ color = '#fff', style, ...props }: SvgProps) => {
-  const size = WIDTH(40); // Điều chỉnh kích thước theo màn hình
+  const size = getSize(40); // Điều chỉnh kích thước theo màn hình
   return (
     <Svg
       width={size}
@@ -32,12 +32,12 @@ export const FaceId = ({ color = '#fff', style, ...props }: SvgProps) => {
       </G>
       <Defs>
         <ClipPath id="clip0_800_27291">
-          <Rect width={size} height={size} rx={WIDTH(20)} fill={color} />
+          <Rect width={size} height={size} rx={getSize(20)} fill={color} />
         </ClipPath>
         <ClipPath id="clip1_800_27291">
           <Rect
-            width={WIDTH(24)}
-            height={WIDTH(24)}
+            width={getSize(24)}
+            height={getSize(24)}
             fill={color}
             transform="translate(8 8)"
           />

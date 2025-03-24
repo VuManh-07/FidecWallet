@@ -41,3 +41,11 @@ export const RFPercentage = (percent: number): number => {
 export const RFValue = (fontSize: number): number => {
   return Math.round(fontSize * scaleFactor);
 };
+
+export const getFontSize = (f: number): number => {
+  return RFValue(f);
+};
+
+export const getSize = (f: number): number => {
+  return RFValue(f);
+};

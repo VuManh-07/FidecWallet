@@ -1,5 +1,5 @@
-import { WIDTH } from '../hooks/use-responsive-dimensions';
+import { getSize } from '../hooks/use-responsive-dimensions';
 
 export function getSizeIconInProfile(size: number = 40): number {
-  return WIDTH(size);
+  return getSize(size);
 }

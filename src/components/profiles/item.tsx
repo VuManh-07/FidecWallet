@@ -1,8 +1,14 @@
 import * as React from 'react';
+import { type TextStyle } from 'react-native';
 
 import { Pressable, Switch, Text, View } from '@/components/ui';
 import { ArrowRight, CheckCircle } from '@/components/ui/icons';
 import type { TxKeyPath } from '@/lib';
+import {
+  getFontSize,
+  getSize,
+  HEIGHT,
+} from '@/lib/hooks/use-responsive-dimensions';
 
 type ItemProps = {
   title: TxKeyPath;
@@ -16,10 +22,6 @@ type ItemProps = {
   isValueOpacity?: boolean;
   isShowIconVerified?: boolean;
   isVerified?: boolean;
-  titleSize?: 'xs' | 'sm' | 'base' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl';
-  valueSize?: 'xs' | 'sm' | 'base' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl';
-  responsiveTitle?: string;
-  responsiveValue?: string;
   titleFont?:
     | 'thin'
     | 'light'
@@ -36,6 +38,8 @@ type ItemProps = {
     | 'semibold'
     | 'bold'
     | 'extrabold';
+  styleTitle?: TextStyle;
+  styleValue?: TextStyle;
 };
 
 export const Item = ({
@@ -50,12 +54,10 @@ export const Item = ({
   isValueOpacity = false,
   isShowIconVerified = false,
   isVerified = true,
-  titleSize = 'xs',
-  valueSize = 'sm',
-  responsiveTitle = 'sm:text-base md:text-lg lg:text-xl xl:text-2xl',
-  responsiveValue = 'sm:text-sm md:text-base lg:text-lg xl:text-xl',
   titleFont = 'bold',
   valueFont = 'normal',
+  styleTitle,
+  styleValue,
 }: ItemProps) => {
   const handleSwitchChange = (value: boolean) => {
     if (onSwitchChange) {
@@ -67,30 +69,36 @@ export const Item = ({
     <Pressable
       onPress={onPress}
       disabled={!onPress}
-      className="flex-row items-center justify-between rounded-lg p-2 dark:bg-neutral-900 sm:p-3 md:p-4 lg:p-5 xl:p-6"
+      className="flex-row items-center justify-between rounded-lg pl-2 pr-4 dark:bg-neutral-900"
     >
-      <View className="flex-row items-center space-x-3">
+      <View className="my-3 flex-row items-center">
         {icon && <View className="mr-1">{icon}</View>}
         <View>
-          <View className="flex-row items-center space-x-1">
+          <View className="mb-1 flex-row items-center">
             <Text
-              className={`text-${titleSize} ${responsiveTitle} font-${titleFont} mr-1 dark:text-white
-                ${isTitleOpacity ? 'opacity-50' : ''}`}
+              className={`font-${titleFont} ${isTitleOpacity ? 'opacity-50' : ''} dark:text-white`}
+              style={[
+                { fontSize: getFontSize(14), lineHeight: HEIGHT(14) },
+                styleTitle,
+              ]}
               tx={title}
             />
             {isShowIconVerified && (
               <CheckCircle
-                className=""
+                className="ml-1"
                 color={isVerified ? 'green' : 'gray'}
-                width={14}
-                height={14}
+                width={getSize(14)}
+                height={getSize(14)}
               />
             )}
           </View>
-          {value && (
+          {value?.trim() && (
             <Text
-              className={`text-${valueSize} ${responsiveValue} font-${valueFont} dark:text-white 
-                ${isValueOpacity ? 'opacity-50' : ''}`}
+              className={`font-${valueFont} mt-1 dark:text-white ${isValueOpacity ? 'opacity-50' : ''}`}
+              style={[
+                { fontSize: getFontSize(12), lineHeight: HEIGHT(14) },
+                styleValue,
+              ]}
             >
               {value}
             </Text>
@@ -108,8 +116,13 @@ export const Item = ({
           <Switch.Icon checked={switchValue} />
         </Switch.Root>
       ) : (
-        onPress && (
-          <ArrowRight className="text-neutral-500" width={6} height={10} />
+        !isSwitch &&
+        !!onPress && (
+          <ArrowRight
+            className="text-neutral-500"
+            width={getSize(6)}
+            height={getSize(10)}
+          />
         )
       )}
     </Pressable>

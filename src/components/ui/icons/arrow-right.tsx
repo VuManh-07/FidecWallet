@@ -4,12 +4,12 @@ import type { SvgProps } from 'react-native-svg';
 import Svg, { Path } from 'react-native-svg';
 
 import { isRTL } from '@/lib';
-import { WIDTH } from '@/lib/hooks/use-responsive-dimensions';
+import { getSize } from '@/lib/hooks/use-responsive-dimensions';
 
 export const ArrowRight = ({ color = '#CCC', style, ...props }: SvgProps) => (
   <Svg
-    width={WIDTH(7)}
-    height={WIDTH(14)}
+    width={getSize(7)}
+    height={getSize(14)}
     viewBox="0 0 7 14"
     fill="none"
     {...props}

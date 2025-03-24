@@ -4,10 +4,10 @@ import type { SvgProps } from 'react-native-svg';
 import Svg, { Path } from 'react-native-svg';
 
 import { isRTL } from '@/lib';
-import { RFValue, WIDTH } from '@/lib/hooks/use-responsive-dimensions';
+import { getSize, RFValue } from '@/lib/hooks/use-responsive-dimensions';
 
 export const Market = ({ color = '#CCC', style, ...props }: SvgProps) => {
-  const size = WIDTH(25);
+  const size = getSize(25);
   const strokeWidth = RFValue(1.5);
   return (
     <Svg

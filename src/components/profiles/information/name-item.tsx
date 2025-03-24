@@ -2,6 +2,7 @@ import * as React from 'react';
 
 import { User as UserIcon } from '@/components/ui/icons';
 import { getSizeIconInProfile } from '@/lib/helps';
+import { getFontSize } from '@/lib/hooks/use-responsive-dimensions';
 
 import { Item } from '../item';
 
@@ -20,10 +21,8 @@ export const NameItem = ({ iconColor }: Props) => {
       value={name}
       isTitleOpacity={true}
       onPress={() => {}}
-      titleSize="xs"
-      valueSize="sm"
-      responsiveTitle="sm:text-sm md:text-base lg:text-lg xl:text-xl"
-      responsiveValue="sm:text-base md:text-lg lg:text-xl xl:text-2xl"
+      styleTitle={{ fontSize: getFontSize(12) }}
+      styleValue={{ fontSize: getFontSize(14) }}
     />
   );
 };

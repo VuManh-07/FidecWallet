@@ -4,10 +4,10 @@ import type { SvgProps } from 'react-native-svg';
 import Svg, { Path } from 'react-native-svg';
 
 import { isRTL } from '@/lib';
-import { RFValue, WIDTH } from '@/lib/hooks/use-responsive-dimensions';
+import { getSize, RFValue } from '@/lib/hooks/use-responsive-dimensions';
 
 export const Browser = ({ color = '#CCC', style, ...props }: SvgProps) => {
-  const size = WIDTH(25); // Điều chỉnh kích thước theo màn hình
+  const size = getSize(25); // Điều chỉnh kích thước theo màn hình
   const strokeWidth = RFValue(1.5);
   return (
     <Svg

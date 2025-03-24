@@ -27,6 +27,11 @@ import {
   View,
 } from '@/components/ui';
 import { translate, useAuth } from '@/lib';
+import {
+  getFontSize,
+  HEIGHT,
+  WIDTH,
+} from '@/lib/hooks/use-responsive-dimensions';
 
 export default function Profiles() {
   const signOut = useAuth.use.signOut();
@@ -39,8 +44,15 @@ export default function Profiles() {
       <FocusAwareStatusBar />
 
       <ScrollView>
-        <View className="flex-1 px-4 pt-16 ">
-          <Text className="text-center text-2xl font-bold">
+        <View className="flex-1" style={{ padding: WIDTH(20) }}>
+          <Text
+            className="text-center font-bold"
+            style={{
+              fontSize: getFontSize(20),
+              lineHeight: getFontSize(20),
+              marginVertical: HEIGHT(12),
+            }}
+          >
             {translate('profiles.title')}
           </Text>
 

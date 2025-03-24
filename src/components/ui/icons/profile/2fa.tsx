@@ -4,10 +4,10 @@ import type { SvgProps } from 'react-native-svg';
 import Svg, { ClipPath, Defs, G, Path, Rect } from 'react-native-svg';
 
 import { isRTL } from '@/lib';
-import { RFValue, WIDTH } from '@/lib/hooks/use-responsive-dimensions';
+import { getSize, RFValue } from '@/lib/hooks/use-responsive-dimensions';
 
 export const TwoFa = ({ color = '#fff', style, ...props }: SvgProps) => {
-  const size = WIDTH(40); // Điều chỉnh kích thước theo màn hình
+  const size = getSize(40); // Điều chỉnh kích thước theo màn hình
   const strokeWidth = RFValue(1.5);
   return (
     <Svg
@@ -53,7 +53,7 @@ export const TwoFa = ({ color = '#fff', style, ...props }: SvgProps) => {
       </G>
       <Defs>
         <ClipPath id="clip0_4154_16815">
-          <Rect width={size} height={size} rx={WIDTH(20)} fill={color} />
+          <Rect width={size} height={size} rx={getSize(20)} fill={color} />
         </ClipPath>
       </Defs>
     </Svg>

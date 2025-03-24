@@ -1,4 +1,9 @@
 {
+  "home": {
+    "cold_wallet": "Cold Wallet",
+    "hot_wallet": "Hot Wallet",
+    "title": "Home"
+  },
   "onboarding": {
     "message": "Welcome to Fidec Wallet app site"
   },

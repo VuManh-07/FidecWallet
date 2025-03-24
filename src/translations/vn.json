@@ -1,4 +1,9 @@
 {
+  "home": {
+    "cold_wallet": "Ví Lạnh",
+    "hot_wallet": "Ví Nóng",
+    "title": "Trang chủ"
+  },
   "onboarding": {
     "message": "Chào mừng bạn đến với ứng dụng Fidec Wallet"
   },

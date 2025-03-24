@@ -2,10 +2,11 @@
 import { Link, Redirect, SplashScreen, Tabs } from 'expo-router';
 import React, { useCallback, useEffect } from 'react';
 
+import Header from '@/components/home/header/header';
 import { Pressable, Text } from '@/components/ui';
 import {
   Browser as BrowserIcon,
-  Feed as FeedIcon,
+  Home as HomeIcon,
   Market as MarketIcon,
   Style as StyleIcon,
   UserSquare as UserSquareIcon,
@@ -37,10 +38,11 @@ export default function TabLayout() {
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Feed',
-          tabBarIcon: ({ color }) => <FeedIcon color={color} />,
-          headerRight: () => <CreateNewPostLink />,
-          tabBarButtonTestID: 'feed-tab',
+          title: 'Home',
+          tabBarIcon: ({ color }) => <HomeIcon color={color} />,
+          headerTitle: () => null,
+          header: () => <Header />,
+          tabBarButtonTestID: 'home-tab',
         }}
       />
 
@@ -68,8 +70,8 @@ export default function TabLayout() {
         name="browser"
         options={{
           title: 'Browser',
-          headerShown: false,
           tabBarIcon: ({ color }) => <BrowserIcon color={color} />,
+          headerRight: () => <CreateNewPostLink />,
           tabBarButtonTestID: 'browser-tab',
         }}
       />

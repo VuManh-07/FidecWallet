@@ -1,24 +1,30 @@
-import { FontAwesome5 } from '@expo/vector-icons';
+import {
+  Buy as BuyIcon,
+  More as MoreIcon,
+  Scan as ScanIcon,
+  Send as SendIcon,
+} from '@/components/ui/icons';
+import { translate } from '@/lib';
 
 export const actions = [
   {
-    label: 'Buy',
-    icon: <FontAwesome5 name="shopping-cart" size={20} color="#FFD700" />,
+    label: translate('home.buy'),
+    icon: <BuyIcon color="#FBBF24" />,
     onPress: () => console.log('Buy Pressed'),
   },
   {
-    label: 'Sent',
-    icon: <FontAwesome5 name="paper-plane" size={20} color="#FFD700" />,
+    label: translate('home.send'),
+    icon: <SendIcon color="#FBBF24" />,
     onPress: () => console.log('Sent Pressed'),
   },
   {
-    label: 'Scan',
-    icon: <FontAwesome5 name="qrcode" size={20} color="#FFD700" />,
+    label: translate('home.scan'),
+    icon: <ScanIcon color="#FBBF24" />,
     onPress: () => console.log('Scan Pressed'),
   },
   {
-    label: 'More',
-    icon: <FontAwesome5 name="ellipsis-h" size={20} color="#FFD700" />,
+    label: translate('home.more'),
+    icon: <MoreIcon color="#FBBF24" />,
     onPress: () => console.log('More Pressed'),
   },
 ];

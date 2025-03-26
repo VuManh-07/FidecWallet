@@ -8,7 +8,7 @@ import { RFValue, WIDTH } from '@/lib/hooks/use-responsive-dimensions';
 
 export const Scan = ({ color = '#fff', style, ...props }: SvgProps) => {
   const size = WIDTH(26);
-  const strokeWidth = RFValue(1.625);
+  const strokeWidth = RFValue(2);
   return (
     <Svg
       width={size}

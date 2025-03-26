@@ -4,10 +4,10 @@ import type { SvgProps } from 'react-native-svg';
 import Svg, { G, Mask, Path, Rect } from 'react-native-svg';
 
 import { isRTL } from '@/lib';
-import { WIDTH } from '@/lib/hooks/use-responsive-dimensions';
+import { getFontSize } from '@/lib/hooks/use-responsive-dimensions';
 
 export const ColdWallet = ({ color = '#fff', style, ...props }: SvgProps) => {
-  const size = WIDTH(20);
+  const size = getFontSize(20);
   return (
     <Svg
       width={size}

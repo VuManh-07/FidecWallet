@@ -6,7 +6,7 @@ import Item from './item';
 
 const QuickActions = () => {
   return (
-    <View className="mt-4 flex-row justify-between px-8">
+    <View className="my-3 flex-row justify-between px-2">
       {actions.map((action, index) => (
         <Item
           key={index}

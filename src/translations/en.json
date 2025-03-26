@@ -1,8 +1,22 @@
 {
   "home": {
+    "buy": "Buy",
+    "cancel": "Cancel",
+    "canceled": "Canceled",
     "cold_wallet": "Cold Wallet",
+    "confirmed": "Confirmed",
+    "edit": "Edit",
     "hot_wallet": "Hot Wallet",
-    "title": "Home"
+    "more": "More",
+    "nft": "NFT",
+    "pending": "Pending",
+    "scan": "Scan",
+    "search": "Search",
+    "see_all": "See All",
+    "send": "Send",
+    "title": "Home",
+    "token": "Token",
+    "transactions": "Transactions"
   },
   "onboarding": {
     "message": "Welcome to Fidec Wallet app site"

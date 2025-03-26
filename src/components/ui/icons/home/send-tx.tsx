@@ -6,14 +6,14 @@ import Svg, { Path } from 'react-native-svg';
 import { isRTL } from '@/lib';
 import { RFValue, WIDTH } from '@/lib/hooks/use-responsive-dimensions';
 
-export const Send = ({ color = '#F9D54A', style, ...props }: SvgProps) => {
-  const size = WIDTH(26);
-  const strokeWidth = RFValue(2);
+export const SendTx = ({ color = '#fff', style, ...props }: SvgProps) => {
+  const size = WIDTH(35);
+  const strokeWidth = RFValue(2.125);
   return (
     <Svg
       width={size}
       height={size}
-      viewBox="0 0 26 26"
+      viewBox="0 0 35 35"
       fill="none"
       {...props}
       style={StyleSheet.flatten([
@@ -22,21 +22,21 @@ export const Send = ({ color = '#F9D54A', style, ...props }: SvgProps) => {
       ])}
     >
       <Path
-        d="M18.3558 9.6416C22.2558 9.97743 23.8483 11.9816 23.8483 16.3691V16.5099C23.8483 21.3524 21.9091 23.2916 17.0666 23.2916H10.0141C5.17159 23.2916 3.23242 21.3524 3.23242 16.5099V16.3691C3.23242 12.0141 4.80326 10.0099 8.63826 9.65244"
+        d="M23.867 12.6089C28.967 13.0481 31.0495 15.6689 31.0495 21.4064V21.5906C31.0495 27.9231 28.5137 30.4589 22.1812 30.4589H12.9587C6.62617 30.4589 4.09033 27.9231 4.09033 21.5906V21.4064C4.09033 15.7114 6.1445 13.0906 11.1595 12.6231"
         stroke={color}
         stroke-width={strokeWidth}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <Path
-        d="M13.5459 16.2502V3.92188"
+        d="M17.5771 21.2501V5.12842"
         stroke={color}
         stroke-width={strokeWidth}
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <Path
-        d="M17.1748 6.33766L13.5457 2.7085L9.9165 6.33766"
+        d="M22.3227 8.28734L17.5769 3.5415L12.8311 8.28734"
         stroke={color}
         stroke-width={strokeWidth}
         stroke-linecap="round"

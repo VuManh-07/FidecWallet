@@ -1,63 +1,103 @@
-import { Image, Text, TouchableOpacity, View } from 'react-native';
+import { useColorScheme } from 'nativewind';
+
+import { colors, Text, TouchableOpacity, View } from '@/components/ui';
+import {
+  Receive as ReceiveIcon,
+  SendTx as SendTxIcon,
+} from '@/components/ui/icons';
+import { WIDTH } from '@/lib/hooks/use-responsive-dimensions';
+
+type StatusType = 'Pending' | 'Confirmed' | 'Canceled';
+
+type Props = {
+  dateTime: string;
+  type: string;
+  status: StatusType;
+  amount: string;
+  amountInUsd: string;
+  currency: string;
+};
+
+const STATUS_COLORS: Record<StatusType, string> = {
+  Pending: 'text-yellow-500 dark:text-yellow-400',
+  Confirmed: 'text-green-500 dark:text-green-400',
+  Canceled: 'text-red-500 dark:text-red-400',
+};
 
 const TransactionItem = ({
   dateTime,
   type,
+  currency,
   status,
   amount,
   amountInUsd,
-}: {
-  dateTime: string;
-  type: string;
-  status: string;
-  amount: string;
-  amountInUsd: string;
-}) => (
-  <View className="border-b border-gray-700 pb-2">
-    {/* Ngày giờ */}
-    <Text className="text-xs text-gray-400">{dateTime}</Text>
+}: Props) => {
+  const StatusTextClass =
+    STATUS_COLORS[status] || 'text-neutral-400 dark:text-neutral-400';
+  const { colorScheme } = useColorScheme();
+  const iconColor =
+    colorScheme === 'dark' ? colors.neutral[100] : colors.neutral[500];
 
-    {/* Nội dung giao dịch */}
-    <View className="flex-row items-center justify-between bg-black p-2">
-      {/* Bên trái: Icon + Thông tin giao dịch */}
-      <View className="flex-row items-center">
-        {/* Icon Gửi/Nhận BNB */}
-        <Image
-          source={{
-            uri:
-              type === 'Sent BNB'
-                ? 'https://cdn-icons-png.flaticon.com/512/2989/2989988.png' // Icon gửi
-                : 'https://cdn-icons-png.flaticon.com/512/2989/2989970.png', // Icon nhận
-          }}
-          className="mr-2 size-6"
-        />
+  return (
+    <View className="my-2 border-b border-gray-700 pb-2">
+      {/* Ngày giờ */}
+      <Text className="text-xs dark:text-neutral-400">{dateTime}</Text>
 
-        {/* Thông tin giao dịch */}
-        <View>
-          <Text className="font-semibold text-white">{type}</Text>
-          <Text className="text-sm text-gray-500">{status}</Text>
+      {/* Nội dung giao dịch */}
+      <View className="flex-row items-center justify-between p-1 dark:bg-black">
+        {/* Icon + Thông tin giao dịch */}
+        <View className="flex-row items-center">
+          {type === 'Send' ? (
+            <SendTxIcon
+              className="mr-2"
+              width={WIDTH(30)}
+              height={WIDTH(30)}
+              color={iconColor}
+            />
+          ) : (
+            <ReceiveIcon
+              className="mr-2"
+              width={WIDTH(30)}
+              height={WIDTH(30)}
+              color={iconColor}
+            />
+          )}
+
+          {/* Thông tin giao dịch */}
+          <View>
+            <Text className="text-sm font-bold dark:text-white">{`${type} ${currency}`}</Text>
+            <Text className={`${StatusTextClass} my-1 text-xs`}>{status}</Text>
+
+            {/* Nút hành động nếu đang chờ xử lý */}
+            {status === 'Pending' && (
+              <View className="mt-0.5 flex-row space-x-2">
+                <TouchableOpacity
+                  className="mr-1 rounded bg-red-500 px-2 py-0.5"
+                  activeOpacity={0.7}
+                >
+                  <Text className="text-xs">Cancel</Text>
+                </TouchableOpacity>
+                <TouchableOpacity
+                  className="ml-1 rounded bg-blue-500 px-2 py-0.5"
+                  activeOpacity={0.7}
+                >
+                  <Text className="text-xs">Edit</Text>
+                </TouchableOpacity>
+              </View>
+            )}
+          </View>
+        </View>
+
+        {/* Số lượng BNB + USD */}
+        <View className="items-end">
+          <Text className="text-sm font-bold">{`${amount} ${currency}`}</Text>
+          <Text className="my-1 text-xs dark:text-neutral-400">
+            {type === 'Send' ? '-' : '+'} {amountInUsd}
+          </Text>
         </View>
       </View>
-
-      {/* Bên phải: Số lượng BNB + USD */}
-      <View className="items-end">
-        <Text className="font-semibold text-white">{amount}</Text>
-        <Text className="text-sm text-gray-500">- {amountInUsd}</Text>
-      </View>
     </View>
-
-    {/* Hiển thị nút nếu trạng thái là "Pending..." */}
-    {status === 'Pending...' && (
-      <View className="mt-2 flex-row space-x-2">
-        <TouchableOpacity className="rounded bg-red-500 px-3 py-1">
-          <Text className="text-sm text-white">Cancel</Text>
-        </TouchableOpacity>
-        <TouchableOpacity className="rounded bg-blue-500 px-3 py-1">
-          <Text className="text-sm text-white">Edit</Text>
-        </TouchableOpacity>
-      </View>
-    )}
-  </View>
-);
+  );
+};
 
 export default TransactionItem;

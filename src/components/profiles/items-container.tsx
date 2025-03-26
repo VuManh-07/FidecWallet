@@ -2,7 +2,6 @@ import React from 'react';
 
 import { Text, View } from '@/components/ui';
 import type { TxKeyPath } from '@/lib';
-import { getFontSize, WIDTH } from '@/lib/hooks/use-responsive-dimensions';
 
 type Props = {
   children: React.ReactNode;
@@ -14,13 +13,8 @@ export const ItemsContainer = ({ children, title }: Props) => {
     <View>
       {title && (
         <Text
-          className="font-bold dark:text-white"
+          className="my-1 text-base font-bold leading-tight dark:text-white"
           tx={title}
-          style={{
-            fontSize: getFontSize(16),
-            lineHeight: WIDTH(16),
-            marginVertical: WIDTH(4),
-          }}
         />
       )}
       {children}

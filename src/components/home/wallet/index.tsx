@@ -7,7 +7,7 @@ import TypeWallet from './type';
 
 export default function Wallet() {
   return (
-    <View className="my-4">
+    <View>
       <TypeWallet />
       <Balance />
     </View>

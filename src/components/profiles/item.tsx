@@ -1,14 +1,9 @@
 import * as React from 'react';
-import { type TextStyle } from 'react-native';
 
 import { Pressable, Switch, Text, View } from '@/components/ui';
 import { ArrowRight, CheckCircle } from '@/components/ui/icons';
 import type { TxKeyPath } from '@/lib';
-import {
-  getFontSize,
-  getSize,
-  HEIGHT,
-} from '@/lib/hooks/use-responsive-dimensions';
+import { getSize } from '@/lib/hooks/use-responsive-dimensions';
 
 type ItemProps = {
   title: TxKeyPath;
@@ -38,8 +33,8 @@ type ItemProps = {
     | 'semibold'
     | 'bold'
     | 'extrabold';
-  styleTitle?: TextStyle;
-  styleValue?: TextStyle;
+  titleFontSize?: string;
+  valueFontSize?: string;
 };
 
 export const Item = ({
@@ -56,8 +51,8 @@ export const Item = ({
   isVerified = true,
   titleFont = 'bold',
   valueFont = 'normal',
-  styleTitle,
-  styleValue,
+  titleFontSize = 'text-sm',
+  valueFontSize = 'text-xs',
 }: ItemProps) => {
   const handleSwitchChange = (value: boolean) => {
     if (onSwitchChange) {
@@ -74,18 +69,14 @@ export const Item = ({
       <View className="my-3 flex-row items-center">
         {icon && <View className="mr-1">{icon}</View>}
         <View>
-          <View className="mb-1 flex-row items-center">
+          <View className="mb-0.5 flex-row items-center">
             <Text
-              className={`font-${titleFont} ${isTitleOpacity ? 'opacity-50' : ''} dark:text-white`}
-              style={[
-                { fontSize: getFontSize(14), lineHeight: HEIGHT(14) },
-                styleTitle,
-              ]}
+              className={`font-${titleFont} ${titleFontSize} ${isTitleOpacity ? 'opacity-50' : ''} leading-tight dark:text-white`}
               tx={title}
             />
             {isShowIconVerified && (
               <CheckCircle
-                className="ml-1"
+                className="ml-0.5"
                 color={isVerified ? 'green' : 'gray'}
                 width={getSize(14)}
                 height={getSize(14)}
@@ -94,11 +85,7 @@ export const Item = ({
           </View>
           {value?.trim() && (
             <Text
-              className={`font-${valueFont} mt-1 dark:text-white ${isValueOpacity ? 'opacity-50' : ''}`}
-              style={[
-                { fontSize: getFontSize(12), lineHeight: HEIGHT(14) },
-                styleValue,
-              ]}
+              className={`font-${valueFont} ${valueFontSize} mt-0.5 dark:text-white ${isValueOpacity ? 'opacity-50' : ''} leading-tight`}
             >
               {value}
             </Text>

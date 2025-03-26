@@ -15,20 +15,15 @@ export default function ItemType({
   onPress,
   isActive = false,
 }: Props) {
-  const bg_active = 'border border-yellow-400 dark:bg-neutral-900';
-  const bg_noActive = 'opacity-50 dark:bg-neutral-800';
+  const bg_active = `border-yellow-400 dark:bg-neutral-900 border-2`;
+  const bg_noActive = 'bg-neutral-200 opacity-50 dark:bg-neutral-800';
   const bg = isActive ? bg_active : bg_noActive;
 
   return (
-    <Pressable
-      className={`rounded-xl px-3 py-1.5 sm:px-4 sm:py-2 md:px-5 md:py-2.5 lg:px-6 lg:py-3 xl:py-3.5 ${bg}`}
-      onPress={onPress}
-    >
+    <Pressable className={`mx-1 rounded-xl px-3 py-2 ${bg}`} onPress={onPress}>
       <View className="flex-row items-center justify-center">
-        {icon && <View className="mx-1 sm:mx-2">{icon}</View>}
-        <Text
-          className={`text-sm font-medium dark:text-white sm:text-xs md:text-sm lg:text-base xl:text-lg 2xl:text-xl`}
-        >
+        {icon && <View className="mr-1">{icon}</View>}
+        <Text className={`ml-1 text-xs font-medium leading-tight`}>
           {label}
         </Text>
       </View>

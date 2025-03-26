@@ -27,11 +27,7 @@ import {
   View,
 } from '@/components/ui';
 import { translate, useAuth } from '@/lib';
-import {
-  getFontSize,
-  HEIGHT,
-  WIDTH,
-} from '@/lib/hooks/use-responsive-dimensions';
+import { HEIGHT, WIDTH } from '@/lib/hooks/use-responsive-dimensions';
 
 export default function Profiles() {
   const signOut = useAuth.use.signOut();
@@ -46,10 +42,8 @@ export default function Profiles() {
       <ScrollView>
         <View className="flex-1" style={{ padding: WIDTH(20) }}>
           <Text
-            className="text-center font-bold"
+            className="text-center text-xl font-bold leading-tight"
             style={{
-              fontSize: getFontSize(20),
-              lineHeight: getFontSize(20),
               marginVertical: HEIGHT(12),
             }}
           >

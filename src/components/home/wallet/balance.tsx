@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { Text, View } from '@/components/ui';
+import { WIDTH } from '@/lib/hooks/use-responsive-dimensions';
 
 const data = {
   balance: '3,128.80',
@@ -10,18 +11,24 @@ const data = {
 
 export default function Balance() {
   return (
-    <View className="my-12 w-full flex-row justify-end">
-      <View className="xl:rounded-l-4xl w-1/2 items-center rounded-l-xl border p-4 shadow-lg dark:border-neutral-800 dark:bg-neutral-700 sm:rounded-l-xl sm:p-4 md:rounded-l-2xl md:p-6 lg:rounded-l-3xl lg:p-8 xl:p-10">
-        <View className="flex flex-col">
-          <View className="flex-row justify-center">
-            <Text className="text-xl font-medium dark:text-yellow-400 md:text-2xl lg:text-3xl xl:text-4xl">
+    <View className="my-10 flex-row justify-end">
+      <View
+        className="w-1/2 items-center border bg-neutral-200 shadow-lg dark:bg-neutral-800"
+        style={{
+          borderTopLeftRadius: WIDTH(8),
+          borderBottomLeftRadius: WIDTH(8),
+        }}
+      >
+        <View className="flex flex-col py-3">
+          <View className="my-1 flex-row justify-center">
+            <Text className="text-lg font-medium leading-tight dark:text-yellow-400">
               {data.balance + ' '}
             </Text>
-            <Text className="text-xl font-medium dark:text-yellow-400 sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">
+            <Text className="text-lg font-medium leading-tight dark:text-yellow-400">
               {data.currency}
             </Text>
           </View>
-          <Text className="mt-1 self-start text-sm text-gray-400 sm:mt-1 sm:text-sm md:mt-2 md:text-base lg:mt-3 lg:text-lg xl:mt-4 xl:text-xl">
+          <Text className="self-start text-xs font-medium leading-tight dark:text-neutral-300">
             ${data.balanceInUsd}
           </Text>
         </View>

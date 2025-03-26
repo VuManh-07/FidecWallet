@@ -1,8 +1,22 @@
 {
   "home": {
+    "buy": "Mua",
+    "cancel": "Hủy",
+    "canceled": "Đã hủy",
     "cold_wallet": "Ví Lạnh",
+    "confirmed": "Đã xác nhận",
+    "edit": "Chỉnh sửa",
     "hot_wallet": "Ví Nóng",
-    "title": "Trang chủ"
+    "more": "Thêm",
+    "nft": "NFT",
+    "pending": "Đang chờ xử lý",
+    "scan": "Quét",
+    "search": "Tìm kiếm",
+    "see_all": "Xem tất cả",
+    "send": "Gửi",
+    "title": "Trang chủ",
+    "token": "Token",
+    "transactions": "Giao dịch"
   },
   "onboarding": {
     "message": "Chào mừng bạn đến với ứng dụng Fidec Wallet"

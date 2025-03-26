@@ -1,4 +1,8 @@
 module.exports = {
+  bg_light: '#ffffff',
+  bg_dark: '#000000',
+  color_light: '#e6dfdf',
+  color_dark: '#e6dfdf',
   white: '#ffffff',
   black: '#000000',
   charcoal: {

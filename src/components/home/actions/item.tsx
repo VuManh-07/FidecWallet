@@ -1,26 +1,30 @@
 import React from 'react';
-import { Text, TouchableOpacity, View } from 'react-native';
 
-interface ItemContainerProps {
+import { Text, TouchableOpacity, View } from '@/components/ui';
+import { WIDTH } from '@/lib/hooks/use-responsive-dimensions';
+
+interface Props {
   icon: React.ReactNode;
   label: string;
   onPress: () => void;
 }
 
-const ItemContainer: React.FC<ItemContainerProps> = ({
-  icon,
-  label,
-  onPress,
-}) => {
+export default function Item({ icon, label, onPress }: Props) {
   return (
     <TouchableOpacity
-      className="w-70 h-78 flex items-center justify-center rounded-2xl bg-neutral-800 px-8 py-4"
+      className="w-full flex-1 items-center justify-center space-y-1 rounded-xl bg-neutral-200 dark:bg-neutral-800"
+      style={{
+        marginHorizontal: WIDTH(4),
+        paddingVertical: WIDTH(8),
+        borderRadius: WIDTH(12),
+      }}
       onPress={onPress}
+      activeOpacity={0.7}
     >
-      <View className="mb-1">{icon}</View>
-      <Text className="text-xs font-semibold text-white">{label}</Text>
+      <View className="mx-1">{icon}</View>
+      <Text className="my-1 text-sm font-normal leading-tight dark:text-white">
+        {label}
+      </Text>
     </TouchableOpacity>
   );
-};
-
-export default ItemContainer;
+}

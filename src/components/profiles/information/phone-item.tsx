@@ -2,7 +2,6 @@ import * as React from 'react';
 
 import { Phone as PhoneIcon } from '@/components/ui/icons';
 import { getSizeIconInProfile } from '@/lib/helps';
-import { getFontSize } from '@/lib/hooks/use-responsive-dimensions';
 
 import { Item } from '../item';
 
@@ -23,8 +22,8 @@ export const PhoneItem = ({ iconColor }: Props) => {
       isVerified={false}
       isTitleOpacity={true}
       onPress={() => {}}
-      styleTitle={{ fontSize: getFontSize(12) }}
-      styleValue={{ fontSize: getFontSize(14) }}
+      titleFontSize="text-xs"
+      valueFontSize="text-sm"
     />
   );
 };

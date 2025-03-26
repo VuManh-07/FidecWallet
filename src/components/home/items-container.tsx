@@ -7,5 +7,5 @@ type Props = {
 };
 
 export const ItemsContainer = ({ children }: Props) => {
-  return <View>{children}</View>;
+  return <View className="flex-1 dark:bg-black">{children}</View>;
 };

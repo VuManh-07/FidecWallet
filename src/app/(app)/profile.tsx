@@ -1,5 +1,5 @@
 /* eslint-disable react/react-in-jsx-scope */
-
+import { useRouter } from 'expo-router';
 import { useColorScheme } from 'nativewind';
 
 import { EmailItem } from '@/components/profiles/information/email-item';
@@ -26,37 +26,49 @@ import {
   Text,
   View,
 } from '@/components/ui';
-import { translate, useAuth } from '@/lib';
+import { signOut as signOutFn, translate } from '@/lib';
+import { useModeApp } from '@/lib/hooks/use-mode-app';
 import { HEIGHT, WIDTH } from '@/lib/hooks/use-responsive-dimensions';
 
 export default function Profiles() {
-  const signOut = useAuth.use.signOut();
+  const { mode } = useModeApp((s) => ({ mode: s.mode }));
+  const router = useRouter();
   const { colorScheme } = useColorScheme();
-  console.log(colorScheme);
   const iconColor =
     colorScheme === 'dark' ? colors.neutral[100] : colors.neutral[500];
+
+  const onLogout = () => {
+    signOutFn(mode);
+    router.push(
+      mode === 'hot'
+        ? '/login/sign-in-hot-wallet'
+        : '/login/sign-in-cold-wallet'
+    );
+  };
+
   return (
     <>
       <FocusAwareStatusBar />
 
       <ScrollView>
         <View className="flex-1" style={{ padding: WIDTH(20) }}>
+          {/* Page Title */}
           <Text
             className="text-center text-xl font-bold leading-tight"
-            style={{
-              marginVertical: HEIGHT(12),
-            }}
+            style={{ marginVertical: HEIGHT(12) }}
           >
-            {translate('profiles.title')}
+            {translate('profile.title')}
           </Text>
 
-          <ItemsContainer title="profiles.information.title">
+          {/* Information Section */}
+          <ItemsContainer title="profile.information.title">
             <NameItem iconColor={iconColor} />
             <PhoneItem iconColor={iconColor} />
             <EmailItem iconColor={iconColor} />
           </ItemsContainer>
 
-          <ItemsContainer title="profiles.settings.title">
+          {/* Settings Section */}
+          <ItemsContainer title="profile.settings.title">
             <TwoFaItem iconColor={iconColor} />
             <CodeToEnterIntoApp iconColor={iconColor} />
             <AllowFaceId iconColor={iconColor} />
@@ -65,17 +77,19 @@ export default function Profiles() {
             <ThemeItem iconColor={iconColor} />
           </ItemsContainer>
 
-          <ItemsContainer title="profiles.manage.title">
+          {/* Manage Section */}
+          <ItemsContainer title="profile.manage.title">
             <PostedItem iconColor={iconColor} />
             <CardItem iconColor={iconColor} />
             <WalletconnectItem iconColor={iconColor} />
             <DeviceItem iconColor={iconColor} />
           </ItemsContainer>
 
-          <ItemsContainer title="profiles.other.title">
+          {/* Other Section */}
+          <ItemsContainer title="profile.other.title">
             <Support24hItem iconColor={iconColor} />
             <ShareItem iconColor={iconColor} />
-            <LogoutItem onPress={signOut} />
+            <LogoutItem onPress={onLogout} />
           </ItemsContainer>
         </View>
       </ScrollView>

@@ -11,36 +11,45 @@ import {
   StyleSheet,
   View,
 } from '@/components/ui';
-import { User as UserIcon } from '@/components/ui/icons';
-import { useIsFirstTime } from '@/lib/hooks';
+import { UpArrow as UpArrowIcon } from '@/components/ui/icons';
+import { translate } from '@/lib';
 
 export const slides = [
   {
     id: '1',
-    title: 'Buy & Sell Instantly!',
-    description:
-      'Use our swapper to safely swap tokens at the best prices, instantly.',
-    icon: <UserIcon />,
+    title: translate('onboarding.securityTitle'),
+    description: translate('onboarding.securityDesc'),
+    image: require('../components/ui/images/onbroading/security.png'),
   },
   {
     id: '2',
-    title: 'Mine Your Crypto!',
-    description:
-      'Use mining tools to generate Bitcoin and other cryptocurrencies.',
-    icon: <UserIcon />,
+    title: translate('onboarding.transactionTitle'),
+    description: translate('onboarding.transactionDesc'),
+    image: require('../components/ui/images/onbroading/transaction.png'),
   },
   {
     id: '3',
-    title: 'Secure Your Wallet!',
-    description: 'Keep your crypto assets safe and secure with our wallet.',
-    icon: <UserIcon />,
+    title: translate('onboarding.controlTitle'),
+    description: translate('onboarding.controlDesc'),
+    image: require('../components/ui/images/onbroading/control.png'),
+  },
+  {
+    id: '4',
+    title: translate('onboarding.web3Title'),
+    description: translate('onboarding.web3Desc'),
+    image: require('../components/ui/images/onbroading/web3-connect.png'),
+  },
+  {
+    id: '5',
+    title: translate('onboarding.techTitle'),
+    description: translate('onboarding.techDesc'),
+    image: require('../components/ui/images/onbroading/advance-tech.png'),
   },
 ];
 
 const { width } = Dimensions.get('window');
 
 export default function Onboarding() {
-  const [_, setIsFirstTime] = useIsFirstTime();
   const router = useRouter();
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -76,23 +85,23 @@ export default function Onboarding() {
       </View>
       <SafeAreaView className="mt-6 w-full px-3 py-2">
         <Button
-          label="Create New Wallet"
+          label={translate('onboarding.create')}
           onPress={() => {
-            setIsFirstTime(false);
-            router.replace('/login');
+            router.push('/wallet/select-create');
           }}
-          className="h-14 rounded-xl dark:bg-neutral-600"
-          textClassName="font-bold text-base text-white"
+          className="h-14 rounded-xl dark:bg-neutral-800"
+          textClassName="font-bold text-base dark:text-white"
         />
 
         <Button
-          label="Already Have a Wallet"
+          label={translate('onboarding.import')}
           onPress={() => {
-            setIsFirstTime(false);
-            router.replace('/home');
+            router.push('/wallet/import-wallet');
           }}
-          className="h-14 rounded-xl bg-yellow-400"
-          textClassName="font-bold text-drak dark:text-dark text-base"
+          className="h-14 rounded-xl bg-yellow-400 dark:bg-yellow-400"
+          textClassName="font-bold text-dark dark:text-dark text-base"
+          icon={<UpArrowIcon color={'black'} className="mx-2" />}
+          iconPosition="right"
         />
       </SafeAreaView>
     </View>

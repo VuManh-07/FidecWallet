@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import { TextInput } from 'react-native';
 
 import { FlatList, Text, TouchableOpacity, View } from '@/components/ui';
-import { Search as SearchIcon } from '@/components/ui/icons';
+import SearchInput from '@/components/ui/search-input';
 import { translate } from '@/lib';
 
 import Item from './item';
@@ -65,16 +64,7 @@ const Token = () => {
   return (
     <View className="flex-1 px-4 py-3 dark:bg-black">
       {/* Search Bar */}
-      <View className="mb-4 flex-row items-center rounded-full bg-neutral-200 px-4 py-2 dark:bg-gray-900">
-        <SearchIcon />
-        <TextInput
-          placeholder={translate('home.search')}
-          placeholderTextColor="gray"
-          value={search}
-          onChangeText={setSearch}
-          className="text-dark ml-3 flex-1 dark:text-white"
-        />
-      </View>
+      <SearchInput search={search} setSearch={setSearch} />
 
       {/* Token List */}
       <FlatList
@@ -87,7 +77,7 @@ const Token = () => {
       {data.length > 5 && (
         <TouchableOpacity className="mt-4 py-3">
           <Text className="text-center text-yellow-400">
-            {translate('home.see_all')} {'>'}
+            {translate('common.seeAll')}
           </Text>
         </TouchableOpacity>
       )}

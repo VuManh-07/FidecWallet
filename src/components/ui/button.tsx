@@ -1,6 +1,6 @@
 import React from 'react';
-import type { PressableProps, View } from 'react-native';
-import { ActivityIndicator, Pressable, Text } from 'react-native';
+import type { PressableProps } from 'react-native';
+import { ActivityIndicator, Pressable, Text, View } from 'react-native';
 import type { VariantProps } from 'tailwind-variants';
 import { tv } from 'tailwind-variants';
 
@@ -14,7 +14,7 @@ const button = tv({
   variants: {
     variant: {
       default: {
-        container: 'bg-black dark:bg-white',
+        container: 'bg-yellow-400 dark:bg-yellow-400',
         label: 'text-white dark:text-black',
         indicator: 'text-white dark:text-black',
       },
@@ -90,6 +90,8 @@ interface Props extends ButtonVariants, Omit<PressableProps, 'disabled'> {
   loading?: boolean;
   className?: string;
   textClassName?: string;
+  icon?: React.ReactNode;
+  iconPosition?: 'left' | 'right';
 }
 
 export const Button = React.forwardRef<View, Props>(
@@ -103,6 +105,8 @@ export const Button = React.forwardRef<View, Props>(
       className = '',
       testID,
       textClassName = '',
+      icon,
+      iconPosition,
       ...props
     },
     ref
@@ -131,12 +135,16 @@ export const Button = React.forwardRef<View, Props>(
                 testID={testID ? `${testID}-activity-indicator` : undefined}
               />
             ) : (
-              <Text
-                testID={testID ? `${testID}-label` : undefined}
-                className={styles.label({ className: textClassName })}
-              >
-                {text}
-              </Text>
+              <View className="flex flex-row items-center space-x-2">
+                {icon && iconPosition === 'left' && icon}
+                <Text
+                  testID={testID ? `${testID}-label` : undefined}
+                  className={styles.label({ className: textClassName })}
+                >
+                  {text}
+                </Text>
+                {icon && iconPosition === 'right' && icon}
+              </View>
             )}
           </>
         )}

@@ -16,7 +16,7 @@ export const NameItem = ({ iconColor }: Props) => {
   return (
     <Item
       icon={<UserIcon color={iconColor} width={sizeIcon} height={sizeIcon} />}
-      title="profiles.information.name"
+      title="profile.information.name"
       value={name}
       isTitleOpacity={true}
       onPress={() => {}}

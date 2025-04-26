@@ -16,8 +16,8 @@ export const LogoutItem = ({ iconColor, onPress }: Props) => {
   return (
     <Item
       icon={<LogoutIcon color={iconColor} width={sizeIcon} height={sizeIcon} />}
-      title="profiles.other.logout"
-      value={translate('profiles.other.logout_desc')}
+      title="profile.other.logout"
+      value={translate('profile.other.logout_desc')}
       isValueOpacity={true}
       onPress={onPress}
     />

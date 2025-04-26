@@ -15,8 +15,8 @@ export const TwoFaItem = ({ iconColor }: Props) => {
   return (
     <Item
       icon={<TwoFaIcon color={iconColor} width={sizeIcon} height={sizeIcon} />}
-      title="profiles.settings.2fa"
-      value={translate('profiles.settings.2fa_desc')}
+      title="profile.settings.2fa"
+      value={translate('profile.settings.2fa_desc')}
       isValueOpacity={true}
       onPress={() => {}}
     />

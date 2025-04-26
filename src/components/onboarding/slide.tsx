@@ -1,6 +1,6 @@
 import React from 'react';
-import { Text, View } from 'react-native';
 
+import { Image, Text, View } from '@/components/ui';
 import {
   getHeight,
   getSize,
@@ -9,7 +9,7 @@ import {
 
 interface SlideProps {
   item: {
-    icon: React.ReactNode;
+    image: number;
     title: string;
     description: string;
   };
@@ -22,7 +22,13 @@ const Slide = ({ item }: SlideProps) => {
       style={{ width: getWidth(), height: getHeight() }}
     >
       {/* Phần hình ảnh (chiếm 2 phần) */}
-      <View className="flex-[2] items-center justify-center">{item.icon}</View>
+      <View className="flex-[2] items-center justify-center">
+        <Image
+          source={item.image}
+          style={{ width: getSize(280), height: getSize(260) }}
+          contentFit="cover"
+        />
+      </View>
 
       {/* Phần nội dung (chiếm 1 phần) */}
       <View

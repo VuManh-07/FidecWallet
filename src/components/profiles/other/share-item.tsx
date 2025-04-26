@@ -17,8 +17,8 @@ export const ShareItem = ({ iconColor }: Props) => {
       icon={
         <Support24hIcon color={iconColor} width={sizeIcon} height={sizeIcon} />
       }
-      title="profiles.other.share"
-      value={translate('profiles.other.share_desc')}
+      title="profile.other.share"
+      value={translate('profile.other.share_desc')}
       isValueOpacity={true}
       onPress={() => {}}
     />

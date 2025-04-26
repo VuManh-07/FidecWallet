@@ -18,8 +18,8 @@ export const AllowFaceId = ({ iconColor }: Props) => {
   return (
     <Item
       icon={<FaceIdIcon color={iconColor} width={sizeIcon} height={sizeIcon} />}
-      title="profiles.settings.allow_face_id"
-      value={translate('profiles.settings.allow_face_id_desc')}
+      title="profile.settings.allow_face_id"
+      value={translate('profile.settings.allow_face_id_desc')}
       isValueOpacity={true}
       isSwitch={true}
       switchValue={isEnabledAllowFaceId}

@@ -2,7 +2,7 @@ import { colorScheme, useColorScheme } from 'nativewind';
 import React from 'react';
 import { useMMKVString } from 'react-native-mmkv';
 
-import { storage } from '../storage';
+import { storage } from '../store/storage';
 
 const SELECTED_THEME = 'SELECTED_THEME';
 export type ColorSchemeType = 'light' | 'dark' | 'system';
@@ -29,11 +29,14 @@ export const useSelectedTheme = () => {
   return { selectedTheme, setSelectedTheme } as const;
 };
 // to be used in the root file to load the selected theme from MMKV
-export const loadSelectedTheme = () => {
+export const loadSelectedTheme = async () => {
+  await new Promise((resolve) => setTimeout(resolve, 100));
   const theme = storage.getString(SELECTED_THEME);
-  console.log(theme, 'them');
-  if (theme !== undefined) {
-    console.log('theme', theme);
+
+  if (!theme) {
+    storage.set(SELECTED_THEME, 'dark'); // Lưu mặc định dark vào MMKV
+    colorScheme.set('dark'); // Đặt mặc định là dark
+  } else {
     colorScheme.set(theme as ColorSchemeType);
   }
 };

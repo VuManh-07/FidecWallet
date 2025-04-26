@@ -1,75 +1,305 @@
 {
-  "home": {
-    "buy": "Mua",
+  "common": {
+    "save": "Lưu",
+    "ok": "OK",
     "cancel": "Hủy",
-    "canceled": "Đã hủy",
-    "cold_wallet": "Ví Lạnh",
-    "confirmed": "Đã xác nhận",
-    "edit": "Chỉnh sửa",
-    "hot_wallet": "Ví Nóng",
-    "more": "Thêm",
-    "nft": "NFT",
-    "pending": "Đang chờ xử lý",
-    "scan": "Quét",
-    "search": "Tìm kiếm",
-    "see_all": "Xem tất cả",
+    "next": "Tiếp theo",
+    "create": "Tạo",
+    "confirm": "Xác nhận",
+    "copy": "Sao chép vào khay nhớ tạm",
+    "connect": "Kết nối",
+    "viewOnExplorer": "Xem trên Explorer",
+    "somethingWentWrong": "Đã xảy ra lỗi!",
+    "searchPlaceholder": "Tìm kiếm",
+    "seeAll": "Xem tất cả",
+    "trending": "Xu hướng",
+    "price": "Giá",
+    "change24h": "Thay đổi (24h)",
+    "marketCap": "Vốn hóa thị trường",
+    "buy": "Mua",
     "send": "Gửi",
-    "title": "Trang chủ",
-    "token": "Token",
-    "transactions": "Giao dịch"
+    "sent": "Đã gửi",
+    "receive": "Nhận",
+    "swap": "Hoán đổi",
+    "import": "Nhập",
+    "popular": "Phổ biến",
+    "share": "Chia sẻ",
+    "follow": "Theo dõi",
+    "saved": "Đã lưu",
+    "details": "Chi tiết",
+    "network": "Mạng",
+    "networks": "Các mạng",
+    "account": "Tài khoản",
+    "accounts": "Các tài khoản",
+    "add": "Thêm",
+    "otherPlatforms": "Nền tảng khác",
+    "address": "Địa chỉ",
+    "symbol": "Ký hiệu",
+    "decimal": "Số thập phân",
+    "token_address": "Địa chỉ Token",
+    "token_symbol": "Ký hiệu Token",
+    "token_decimal": "Số thập phân Token",
+    "scan": "Quét",
+    "more": "Thêm",
+    "more_services": "Thêm dịch vụ",
+    "crypto": "Tiền mã hóa",
+    "notification": "Thông báo",
+    "from": "Từ",
+    "to": "Đến",
+    "amount": "Số lượng",
+    "gas": "Gas",
+    "gas_fee": "Phí Gas",
+    "gas_limited": "Giới hạn Gas",
+    "gas_price": "Giá Gas",
+    "balance": "Số dư",
+    "total": "Tổng cộng",
+    "fee": "Phí",
+    "network_fee": "Phí mạng",
+    "date": "Ngày",
+    "transaction": "Giao dịch",
+    "login": "Đăng nhập",
+    "logout": "Đăng xuất",
+    "copySuccess": "Địa chỉ đã được sao chép!",
+    "max": "Tối đa",
+    "edit": "Sửa",
+    "name": "Tên"
+  },
+  "bottom_nav": {
+    "home": "Trang chủ",
+    "market": "Thị trường",
+    "browser": "Trình duyệt",
+    "profile": "Hồ sơ"
+  },
+  "auth": {
+    "login": {
+      "welcome": "Chào mừng trở lại!",
+      "subtitle": "Vui lòng nhập mã PIN",
+      "enterPassword": "Vui lòng nhập mật khẩu của bạn",
+      "attemptsInfo": "Bạn còn {max} lần thử.",
+      "forgotPin": "Quên mã PIN ví?",
+      "forgotPassword": "Quên mật khẩu ví?",
+      "incorrectPin": "Mã PIN không đúng – {trialLabel}",
+      "noWalletYet": "Bạn chưa có ví? {createLink}"
+    },
+    "password": {
+      "title": "Mật khẩu",
+      "create": "Tạo mật khẩu",
+      "new": "Mật khẩu mới",
+      "confirm": "Xác nhận mật khẩu"
+    },
+    "acceptClause": "Tôi xác nhận tôi đủ 18 tuổi và đồng ý với Thỏa thuận Người dùng và Chính sách Bảo mật.",
+    "terms": "Điều khoản sử dụng",
+    "privacy": "Chính sách bảo mật",
+    "and": "và",
+    "createWalletNow": "Tạo ngay",
+    "create_hot_wallet": "Tạo ví nóng",
+    "create_cold_wallet": "Tạo ví lạnh",
+    "createWallet": "Tạo ví",
+    "importWallet": "Nhập ví",
+    "secretRecoveryWords": "Từ khôi phục bí mật",
+    "confirmSecretRecoveryWords": "Xác nhận từ khôi phục bí mật",
+    "hotWallet": {
+      "title": "Ví nóng",
+      "desc": "Passkey: Tìm kiếm bằng passkey trong iCloud, Google, Yubikey, trình quản lý mật khẩu và hơn thế nữa."
+    },
+    "coldWallet": {
+      "title": "Ví lạnh",
+      "desc": "Cụm từ khôi phục: được bảo mật bằng cụm từ 24 từ bí mật của bạn."
+    },
+    "nameAccount": "Tên tài khoản",
+    "wordCounts": {
+      "12": "12 từ",
+      "18": "18 từ",
+      "24": "24 từ"
+    }
   },
   "onboarding": {
-    "message": "Chào mừng bạn đến với ứng dụng Fidec Wallet"
+    "securityTitle": "Bảo mật tuyệt đối",
+    "securityDesc": "Ví lạnh sử dụng smartcard + mã hóa blockchain đảm bảo bảo vệ tài sản tuyệt đối.",
+    "transactionTitle": "Giao dịch nhanh chóng",
+    "transactionDesc": "Xác nhận giao dịch chỉ với một chạm, tốc độ mượt mà trên blockchain.",
+    "controlTitle": "Toàn quyền kiểm soát",
+    "controlDesc": "Bạn giữ khóa riêng, không qua trung gian, toàn quyền với tài sản.",
+    "web3Title": "Kết nối Web3 dễ dàng",
+    "web3Desc": "Hỗ trợ ví nóng & lạnh, tương thích với DeFi, NFT và đa chuỗi.",
+    "techTitle": "Công nghệ tiên tiến",
+    "techDesc": "Mã hóa ECDSA, AES-GCM, bảo mật blockchain, mã nguồn mở minh bạch.",
+    "create": "Tạo ví mới",
+    "import": "Đã có ví"
   },
-  "profiles": {
+  "home": {
+    "tabs": {
+      "transactions": "Giao dịch",
+      "token": "Token",
+      "nft": "NFT"
+    },
+    "actions": {
+      "buy": "Mua",
+      "send": "Gửi",
+      "scan": "Quét",
+      "more": "Thêm"
+    }
+  },
+  "market": {
+    "tabs": {
+      "favoriteList": "Yêu thích",
+      "popular": "Phổ biến",
+      "rise": "Tăng giá",
+      "discount": "Giảm giá",
+      "new": "Mới",
+      "overview": "Tổng quan",
+      "community": "Cộng đồng",
+      "news": "Tin tức"
+    },
+    "bullish": "Tăng trưởng",
+    "bearish": "Giảm trưởng",
+    "feelingQuestion": "Bạn cảm thấy thế nào về Bitcoin ngày hôm nay?"
+  },
+  "profile": {
+    "title": "Hồ sơ",
     "information": {
-      "email": "Email",
+      "title": "Thông tin",
       "name": "Tên",
-      "phone": "Số điện thoại",
-      "title": "Thông tin"
-    },
-    "manage": {
-      "card": "Thẻ",
-      "card_desc": "Mã PIN, Đặt lại & Khóa thẻ",
-      "device_management": "Quản lý thiết bị",
-      "device_management_desc": "Quản lý thiết bị đăng nhập gần đây",
-      "posted": "Đã đăng",
-      "posted_desc": "Quản lý bài đăng",
-      "title": "Quản lý",
-      "walletconnect": "Kết nối ví",
-      "walletconnect_desc": "Kết nối ví"
-    },
-    "other": {
-      "logout": "Đăng xuất",
-      "logout_desc": "Đăng xuất",
-      "share": "Chia sẻ",
-      "share_desc": "Chia sẻ ứng dụng Fidec Wallet!",
-      "support_24_7": "Hỗ trợ 24/7",
-      "support_24_7_desc": "Được hỗ trợ bởi nhân viên AI 24/7",
-      "title": "Khác"
+      "phone": "Điện thoại",
+      "email": "Email"
     },
     "settings": {
-      "2fa": "Xác thực hai yếu tố",
-      "2fa_desc": "Bảo mật",
-      "allow_face_id": "Cho phép Face ID",
-      "allow_face_id_desc": "Sử dụng Face ID để đăng nhập",
-      "code_to_enter": "Mã để nhập vào ứng dụng",
-      "code_to_enter_desc": "Thay đổi mã đăng nhập",
-      "english": "Tiếng Anh",
-      "fingerprint": "Dấu vân tay",
-      "fingerprint_desc": "Sử dụng dấu vân tay để đăng nhập",
-      "language": "Ngôn ngữ",
-      "theme": {
-        "dark": "Tối",
-        "light": "Sáng",
-        "system": "Hệ thống",
-        "title": "Chủ đề"
-      },
       "title": "Cài đặt",
+      "2fa": "Xác thực hai yếu tố",
+      "2fa_desc": "Bật 2FA để tăng cường bảo mật",
+      "allow_face_id": "Cho phép Face ID",
+      "allow_face_id_desc": "Sử dụng Face ID để vào ứng dụng",
+      "code_to_enter": "Mã vào ứng dụng",
+      "code_to_enter_desc": "Thay đổi mã vào ứng dụng",
+      "fingerprint": "Vân tay",
+      "fingerprint_desc": "Sử dụng vân tay để vào ứng dụng",
+      "language": {
+        "title": "Ngôn ngữ",
+        "options": {
+          "english": "Tiếng Anh",
+          "vietnamese": "Tiếng Việt"
+        }
+      },
+      "theme": {
+        "title": "Chủ đề",
+        "options": {
+          "light": "Sáng",
+          "dark": "Tối",
+          "system": "Hệ thống"
+        }
+      },
       "version": "Phiên bản",
-      "vietnamese": "Tiếng Việt"
+      "shareApp": "Chia sẻ ứng dụng Fidec",
+      "terms": "Điều khoản & Chính sách",
+      "support": "Hỗ trợ 24/7",
+      "logout": "Đăng xuất"
     },
-    "title": "Hồ sơ"
+    "manage": {
+      "title": "Quản lý",
+      "posted": "Quản lý bài đăng",
+      "posted_desc": "Quản lý nội dung bạn đã đăng",
+      "card": "Quản lý thẻ",
+      "card_desc": "Quản lý các thẻ đã lưu",
+      "walletconnect": "WalletConnect",
+      "walletconnect_desc": "Quản lý kết nối DApp qua WalletConnect",
+      "device_management": "Quản lý thiết bị",
+      "device_management_desc": "Quản lý các thiết bị đã kết nối với ví của bạn"
+    },
+    "other": {
+      "title": "Khác",
+      "logout": "Đăng xuất",
+      "logout_desc": "Thoát khỏi tài khoản của bạn",
+      "share": "Chia sẻ ứng dụng",
+      "share_desc": "Mời bạn bè và chia sẻ ứng dụng",
+      "support_24_7": "Hỗ trợ 24/7",
+      "support_24_7_desc": "Cần trợ giúp? Hãy liên hệ với chúng tôi bất cứ lúc nào"
+    }
   },
-  "welcome": "Chào mừng bạn đến với ứng dụng Fidec Wallet"
+  "gasFee": {
+    "basic": "Cơ bản",
+    "advanced": "Nâng cao"
+  },
+  "wallet": {
+    "addAccountBtn": "Thêm tài khoản hoặc ví phần cứng"
+  },
+  "header": {
+    "welcomeHot": "Chào mừng đến với ví nóng!",
+    "welcomeCold": "Chào mừng đến với ví lạnh!"
+  },
+  "bridge": {
+    "welcomeHot": "Chào mừng đến với Ví Nóng",
+    "welcomeCold": "Chào mừng đến với Ví Lạnh",
+    "hotDesc": "Nhanh chóng - Tiện lợi - Dễ kiểm soát",
+    "coldDesc": "An toàn, bảo mật, lưu trữ lâu dài ngoại tuyến"
+  },
+  "buy": {
+    "purchaseAddress": "Địa chỉ nhận mua",
+    "addressWarning": "Vui lòng đảm bảo token bạn gửi đúng mạng và có địa chỉ hợp đồng kết thúc bằng 20f8.",
+    "qrTitle": "Quét hoặc hiển thị mã QR",
+    "qrDescription": "Sử dụng tính năng này để nhanh chóng nhận Token từ người khác"
+  },
+  "send": {
+    "warning": "Vui lòng {bold}Kiểm tra và Xác nhận{bold} thông tin giao dịch"
+  },
+  "transactions": {
+    "sections": {
+      "today": "Hôm nay",
+      "yesterday": "Hôm qua",
+      "week": "Tuần này",
+      "month": "Tháng này",
+      "older": "Cũ hơn"
+    },
+    "empty": "Chưa có giao dịch",
+    "noMore": "Không còn dữ liệu",
+    "viewAll": "Xem tất cả"
+  },
+  "camera": {
+    "permissionMessage": "Chúng tôi cần quyền truy cập camera để tiếp tục"
+  },
+  "scan": {
+    "title": "Quét mã QR",
+    "action": {
+      "scan": "Quét mã QR",
+      "myqr": "Mã QR của tôi",
+      "selectqr": "Chọn mã QR"
+    },
+    "instruction": "Quét địa chỉ để gửi tiền"
+  },
+  "modal": {
+    "fingerprint": "Xác thực vân tay",
+    "nfc": "Chạm thẻ NFC",
+    "confirm": "Bạn có chắc chắn không?",
+    "verification": "Xác thực",
+    "fingerprintInstruction": "Vui lòng xác thực vân tay để tiếp tục giao dịch.",
+    "termsConditions": "Điều khoản & Điều kiện",
+    "nfcInstruction": "Vui lòng chạm thẻ NFC để xác thực và tiếp tục giao dịch."
+  },
+  "error": {
+    "network": "Lỗi mạng. Vui lòng thử lại.",
+    "unknown": "Đã xảy ra lỗi không xác định.",
+    "notFound": "Không tìm thấy tài nguyên.",
+    "unauthorized": "Chưa xác thực. Vui lòng đăng nhập lại.",
+    "loading_noti": "Lỗi tải thông báo!",
+    "wrong_password": "Sai mật khẩu",
+    "screen_exist": "Màn hình này không tồn tại.",
+    "go_home": "Quay lại màn hình chính!",
+    "password_required": "Vui lòng nhập mật khẩu",
+    "password_min": "Mật khẩu phải có ít nhất 8 ký tự",
+    "password_upper": "Mật khẩu phải bắt đầu bằng chữ in hoa",
+    "password_special": "Mật khẩu phải chứa ít nhất một ký tự đặc biệt",
+    "password_mismatch": "Mật khẩu xác nhận không khớp",
+    "mnemonic_incorrect": "Sai từ. Vui lòng kiểm tra và thử lại."
+  },
+  "success": {
+    "title": "Thành công",
+    "transactionSent": "Giao dịch đã được gửi!",
+    "walletCreated": "Tạo ví thành công"
+  },
+  "empty": {
+    "list": "Không có dữ liệu.",
+    "transactions": "Chưa có giao dịch nào.",
+    "nft": "Chưa có NFT nào.",
+    "tokens": "Chưa có Token nào.",
+    "notification": "Bạn chưa có thông báo nào."
+  }
 }

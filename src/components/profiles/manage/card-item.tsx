@@ -15,8 +15,8 @@ export const CardItem = ({ iconColor }: Props) => {
   return (
     <Item
       icon={<CardIcon color={iconColor} width={sizeIcon} height={sizeIcon} />}
-      title="profiles.manage.card"
-      value={translate('profiles.manage.card_desc')}
+      title="profile.manage.card"
+      value={translate('profile.manage.card_desc')}
       isValueOpacity={true}
       onPress={() => {}}
     />

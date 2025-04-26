@@ -1,25 +1,33 @@
-import { FlashList as NFlashList } from '@shopify/flash-list';
+import { BottomSheetFlatList } from '@gorhom/bottom-sheet';
+import { FlashList, FlashList as NFlashList } from '@shopify/flash-list';
 import React from 'react';
-import { ActivityIndicator, View } from 'react-native';
+import { ActivityIndicator, Platform, View } from 'react-native';
 import Svg, { Circle, Path } from 'react-native-svg';
 
 import { Text } from './text';
 type Props = {
   isLoading: boolean;
+  isError: boolean;
 };
 
 export const List = NFlashList;
 
-export const EmptyList = React.memo(({ isLoading }: Props) => {
+export const EmptyList = React.memo(({ isLoading, isError }: Props) => {
   return (
     <View className="min-h-[400px] flex-1 items-center justify-center">
-      {!isLoading ? (
-        <View>
+      {isLoading ? (
+        <ActivityIndicator />
+      ) : isError ? (
+        <>
+          <Text className="pt-4 text-center dark:text-gray-500">
+            Something went wrong!
+          </Text>
+        </>
+      ) : (
+        <>
           <NoData />
           <Text className="pt-4 text-center">Sorry! No data found</Text>
-        </View>
-      ) : (
-        <ActivityIndicator />
+        </>
       )}
     </View>
   );
@@ -57,3 +65,32 @@ export const NoData = () => (
     <Circle cx={433.636} cy={105.174} r={12.182} fill="#fff" />
   </Svg>
 );
+
+type ListComponentProps<T> = {
+  data: T[];
+  keyExtractor: (item: T) => string;
+  renderItem: ({ item }: { item: T }) => JSX.Element;
+  testID?: string;
+  estimatedItemSize?: number;
+};
+
+const ViewListComponent =
+  Platform.OS === 'web' ? FlashList : BottomSheetFlatList;
+
+export function ListComponent<T>({
+  data,
+  keyExtractor,
+  renderItem,
+  testID,
+  estimatedItemSize,
+}: ListComponentProps<T>) {
+  return (
+    <ViewListComponent
+      data={data}
+      keyExtractor={keyExtractor}
+      renderItem={renderItem}
+      testID={testID}
+      estimatedItemSize={estimatedItemSize}
+    />
+  );
+}

@@ -42,6 +42,7 @@ import { Text } from './text';
 
 type ModalProps = BottomSheetModalProps & {
   title?: string;
+  isShowHeader?: boolean;
 };
 
 type ModalRef = React.ForwardedRef<BottomSheetModal>;
@@ -49,6 +50,7 @@ type ModalRef = React.ForwardedRef<BottomSheetModal>;
 type ModalHeaderProps = {
   title?: string;
   dismiss: () => void;
+  isShowHeader?: boolean;
 };
 
 export const useModal = () => {
@@ -65,9 +67,10 @@ export const useModal = () => {
 export const Modal = React.forwardRef(
   (
     {
-      snapPoints: _snapPoints = ['60%'],
+      snapPoints: _snapPoints = ['50%'],
       title,
       detached = false,
+      isShowHeader = true,
       ...props
     }: ModalProps,
     ref: ModalRef
@@ -88,10 +91,14 @@ export const Modal = React.forwardRef(
       () => (
         <>
           <View className="mb-8 mt-2 h-1 w-12 self-center rounded-lg bg-gray-400 dark:bg-gray-700" />
-          <ModalHeader title={title} dismiss={modal.dismiss} />
+          <ModalHeader
+            title={title}
+            dismiss={modal.dismiss}
+            isShowHeader={isShowHeader}
+          />
         </>
       ),
-      [title, modal.dismiss]
+      [title, modal.dismiss, isShowHeader]
     );
 
     return (
@@ -104,6 +111,7 @@ export const Modal = React.forwardRef(
         backdropComponent={props.backdropComponent || renderBackdrop}
         enableDynamicSizing={false}
         handleComponent={renderHandleComponent}
+        keyboardBehavior="extend"
       />
     );
   }
@@ -155,23 +163,27 @@ const getDetachedProps = (detached: boolean) => {
  * ModalHeader
  */
 
-const ModalHeader = React.memo(({ title, dismiss }: ModalHeaderProps) => {
-  return (
-    <>
-      {title && (
-        <View className="flex-row px-2 py-4">
-          <View className="size-[24px]" />
-          <View className="flex-1">
-            <Text className="text-center text-[16px] font-bold text-[#26313D] dark:text-white">
-              {title}
-            </Text>
-          </View>
-        </View>
-      )}
-      <CloseButton close={dismiss} />
-    </>
-  );
-});
+const ModalHeader = React.memo(
+  ({ title, dismiss, isShowHeader }: ModalHeaderProps) => {
+    return (
+      isShowHeader && (
+        <>
+          {title && (
+            <View className="flex-row px-2 py-4">
+              <View className="size-[24px]" />
+              <View className="flex-1">
+                <Text className="text-center text-[16px] font-bold text-[#26313D] dark:text-white">
+                  {title}
+                </Text>
+              </View>
+            </View>
+          )}
+          <CloseButton close={dismiss} />
+        </>
+      )
+    );
+  }
+);
 
 const CloseButton = ({ close }: { close: () => void }) => {
   return (

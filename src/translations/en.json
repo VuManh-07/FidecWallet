@@ -1,75 +1,305 @@
 {
-  "home": {
-    "buy": "Buy",
+  "common": {
+    "save": "Save",
+    "ok": "OK",
     "cancel": "Cancel",
-    "canceled": "Canceled",
-    "cold_wallet": "Cold Wallet",
-    "confirmed": "Confirmed",
-    "edit": "Edit",
-    "hot_wallet": "Hot Wallet",
-    "more": "More",
-    "nft": "NFT",
-    "pending": "Pending",
-    "scan": "Scan",
-    "search": "Search",
-    "see_all": "See All",
+    "next": "Next",
+    "create": "Create",
+    "confirm": "Confirm",
+    "copy": "Copy to Clipboard",
+    "connect": "Connect",
+    "viewOnExplorer": "View on Explorer",
+    "somethingWentWrong": "Something went wrong!",
+    "searchPlaceholder": "Search",
+    "seeAll": "See all",
+    "trending": "Trending",
+    "price": "Price",
+    "change24h": "Change (24h)",
+    "marketCap": "Market Cap",
+    "buy": "Buy",
     "send": "Send",
-    "title": "Home",
-    "token": "Token",
-    "transactions": "Transactions"
+    "sent": "Sent",
+    "receive": "Receive",
+    "swap": "Swap",
+    "import": "Import",
+    "popular": "Popular",
+    "share": "Share",
+    "follow": "Follow",
+    "saved": "Saved",
+    "details": "Details",
+    "network": "Network",
+    "networks": "Networks",
+    "account": "Account",
+    "accounts": "Accounts",
+    "add": "Add",
+    "otherPlatforms": "Other platforms",
+    "address": "Address",
+    "symbol": "Symbol",
+    "decimal": "Decimal",
+    "token_address": "Token Address",
+    "token_symbol": "Token Symbol",
+    "token_decimal": "Token Decimal",
+    "scan": "Scan",
+    "more": "More",
+    "more_services": "More Services",
+    "crypto": "Crypto",
+    "notification": "Notification",
+    "from": "From",
+    "to": "To",
+    "amount": "Amount",
+    "gas": "Gas",
+    "gas_fee": "Gas Fee",
+    "gas_limited": "Gas Limited",
+    "gas_price": "Gas Price",
+    "balance": "Balance",
+    "total": "Total",
+    "fee": "Fee",
+    "network_fee": "Network Fee",
+    "date": "Date",
+    "transaction": "Transaction",
+    "login": "Login",
+    "logout": "Logout",
+    "copySuccess": "Address copied!",
+    "max": "Max",
+    "edit": "Edit",
+    "name": "Name"
+  },
+  "bottom_nav": {
+    "home": "Home",
+    "market": "Market",
+    "browser": "Browser",
+    "profile": "Profile"
+  },
+  "auth": {
+    "login": {
+      "welcome": "Welcome back!",
+      "subtitle": "Please enter your PIN",
+      "enterPassword": "Please enter your password",
+      "attemptsInfo": "You can try {max} more times.",
+      "forgotPin": "Forgot wallet PIN?",
+      "forgotPassword": "Forgot Wallet Password?",
+      "incorrectPin": "Incorrect PIN – {trialLabel}",
+      "noWalletYet": "Don’t have a wallet yet? {createLink}"
+    },
+    "password": {
+      "title": "Password",
+      "create": "Create password",
+      "new": "New password",
+      "confirm": "Confirm password"
+    },
+    "acceptClause": "I certify that I am 18 years of age or older and agree to the User Agreement and Privacy Policy.",
+    "terms": "User Agreement",
+    "privacy": "Privacy Policy",
+    "and": "and",
+    "createWalletNow": "Create Now",
+    "create_hot_wallet": "Create Hot Wallet",
+    "create_cold_wallet": "Create Cold Wallet",
+    "createWallet": "Create wallet",
+    "importWallet": "Import wallet",
+    "secretRecoveryWords": "Secret recovery words",
+    "confirmSecretRecoveryWords": "Confirm secret recovery words",
+    "hotWallet": {
+      "title": "Hot Wallet",
+      "desc": "Passkey: Search by passkey in iCloud, Google, Yubikey, password managers and more."
+    },
+    "coldWallet": {
+      "title": "Cold Wallet",
+      "desc": "Recovery phrase: secured by your 24-word secret recovery phrase."
+    },
+    "nameAccount": "Account name",
+    "wordCounts": {
+      "12": "12 words",
+      "18": "18 words",
+      "24": "24 words"
+    }
   },
   "onboarding": {
-    "message": "Welcome to Fidec Wallet app site"
+    "securityTitle": "Absolute Security",
+    "securityDesc": "Smartcard cold wallet + blockchain encryption ensures absolute asset protection.",
+    "transactionTitle": "Fast Transactions",
+    "transactionDesc": "Confirm transactions with a single tap, smooth speed on the blockchain.",
+    "controlTitle": "Full Control",
+    "controlDesc": "You hold your private keys, no intermediaries, full control over your assets.",
+    "web3Title": "Easy Web3 Connectivity",
+    "web3Desc": "Supports both hot & cold wallets, compatible with DeFi, NFTs, and multi-chain.",
+    "techTitle": "Advanced Technology",
+    "techDesc": "ECDSA encryption, AES-GCM, blockchain security, transparent open-source.",
+    "create": "Create New Wallet",
+    "import": "Already Have a Wallet"
   },
-  "profiles": {
+  "home": {
+    "tabs": {
+      "transactions": "Transactions",
+      "token": "Token",
+      "nft": "NFT"
+    },
+    "actions": {
+      "buy": "Buy",
+      "send": "Send",
+      "scan": "Scan",
+      "more": "More"
+    }
+  },
+  "market": {
+    "tabs": {
+      "favoriteList": "Favorite",
+      "popular": "Popular",
+      "rise": "Rise",
+      "discount": "Discount",
+      "new": "New",
+      "overview": "Overview",
+      "community": "Community",
+      "news": "News"
+    },
+    "bullish": "Bullish",
+    "bearish": "Bearish",
+    "feelingQuestion": "How do you feel about Bitcoin today?"
+  },
+  "profile": {
+    "title": "Profile",
     "information": {
-      "email": "Email",
+      "title": "Information",
       "name": "Name",
       "phone": "Phone",
-      "title": "Information"
-    },
-    "manage": {
-      "card": "Card",
-      "card_desc": "PIN, RESET & Card Lock",
-      "device_management": "Device Management",
-      "device_management_desc": "Recent login equipment management",
-      "posted": "Posted",
-      "posted_desc": "Post Manager Posted",
-      "title": "Manage",
-      "walletconnect": "Wallet Connect",
-      "walletconnect_desc": "Wallet Connect"
-    },
-    "other": {
-      "logout": "Logout",
-      "logout_desc": "Logout",
-      "share": "Share",
-      "share_desc": "Share Fidec Wallet app!",
-      "support_24_7": "Support 24/7",
-      "support_24_7_desc": "Supported by AI staff 24/7",
-      "title": "Other"
+      "email": "Email"
     },
     "settings": {
-      "2fa": "2FA",
-      "2fa_desc": "Security",
-      "allow_face_id": "Allow Face ID",
-      "allow_face_id_desc": "Use Face ID to enter into the app",
-      "code_to_enter": "Code to enter into the app",
-      "code_to_enter_desc": "Change entrance code",
-      "english": "English",
-      "fingerprint": "Fingerprint",
-      "fingerprint_desc": "Use Fingerprint to enter into the app",
-      "language": "Language",
-      "theme": {
-        "dark": "Dark",
-        "light": "Light",
-        "system": "System",
-        "title": "Theme"
-      },
       "title": "Settings",
+      "2fa": "Two-factor authentication",
+      "2fa_desc": "Enable 2FA for extra security",
+      "allow_face_id": "Allow Face ID",
+      "allow_face_id_desc": "Use Face ID to enter the app",
+      "code_to_enter": "App entry code",
+      "code_to_enter_desc": "Change the code to enter the app",
+      "fingerprint": "Fingerprint",
+      "fingerprint_desc": "Use fingerprint to enter the app",
+      "language": {
+        "title": "Language",
+        "options": {
+          "english": "English",
+          "vietnamese": "Vietnamese"
+        }
+      },
+      "theme": {
+        "title": "Theme",
+        "options": {
+          "light": "Light",
+          "dark": "Dark",
+          "system": "System"
+        }
+      },
       "version": "Version",
-      "vietnamese": "Vietnamese"
+      "shareApp": "Share Fidec App",
+      "terms": "Terms & Privacy",
+      "support": "Support 24/7",
+      "logout": "Log out"
     },
-    "title": "Profile"
+    "manage": {
+      "title": "Manage",
+      "posted": "Manage posted",
+      "posted_desc": "Manage your posted content",
+      "card": "Manage card",
+      "card_desc": "Manage your saved cards",
+      "walletconnect": "WalletConnect",
+      "walletconnect_desc": "Manage DApp connections via WalletConnect",
+      "device_management": "Device Management",
+      "device_management_desc": "Manage devices connected to your wallet"
+    },
+    "other": {
+      "title": "Other",
+      "logout": "Log out",
+      "logout_desc": "Sign out of your account",
+      "share": "Share App",
+      "share_desc": "Invite friends and share the app",
+      "support_24_7": "Support 24/7",
+      "support_24_7_desc": "Need help? Contact us any time"
+    }
   },
-  "welcome": "Welcome to Fidec Wallet app site"
+  "gasFee": {
+    "basic": "Basic",
+    "advanced": "Advanced"
+  },
+  "wallet": {
+    "addAccountBtn": "Add Account or Hardware Wallet"
+  },
+  "header": {
+    "welcomeHot": "Welcome to Hot Wallet!",
+    "welcomeCold": "Welcome to Cold Wallet!"
+  },
+  "bridge": {
+    "welcomeHot": "Welcome to Hot Wallet",
+    "welcomeCold": "Welcome to Cold Wallet",
+    "hotDesc": "Fast - Convenient - Good control",
+    "coldDesc": "Safe, secure, long-term offline storage."
+  },
+  "buy": {
+    "purchaseAddress": "Purchase Address",
+    "addressWarning": "Please ensure the token you are sending matches the expected network and contract address ending with 20f8.",
+    "qrTitle": "Scan or display QR Code",
+    "qrDescription": "Use this feature to quickly receive Token from anyone"
+  },
+  "send": {
+    "warning": "Please {bold}Check and Confirm{bold} the transaction information"
+  },
+  "transactions": {
+    "sections": {
+      "today": "Today",
+      "yesterday": "Yesterday",
+      "week": "This Week",
+      "month": "This Month",
+      "older": "Older"
+    },
+    "empty": "No transaction",
+    "noMore": "No more data",
+    "viewAll": "View All"
+  },
+  "camera": {
+    "permissionMessage": "We need your permission to show the camera"
+  },
+  "scan": {
+    "title": "Scan QR Code",
+    "action": {
+      "scan": "Scan QR",
+      "myqr": "My QR Code",
+      "selectqr": "Select QR"
+    },
+    "instruction": "Scan address to send funds"
+  },
+  "modal": {
+    "fingerprint": "Verify Fingerprint",
+    "nfc": "Tap NFC Card",
+    "confirm": "Are you sure?",
+    "verification": "Verification",
+    "fingerprintInstruction": "Please verify your fingerprint to proceed with the transaction.",
+    "termsConditions": "Terms & Conditions",
+    "nfcInstruction": "Please tap your NFC card to verify and proceed with the transaction."
+  },
+  "error": {
+    "network": "Network error. Please try again.",
+    "unknown": "An unknown error occurred.",
+    "notFound": "Resource not found.",
+    "unauthorized": "Unauthorized. Please login again.",
+    "loading_noti": "Error loading notification!",
+    "wrong_password": "Password is incorrect",
+    "screen_exist": "This screen doesn't exist.",
+    "go_home": "Go to home screen!",
+    "password_required": "Password is required",
+    "password_min": "Password must be at least 8 characters",
+    "password_upper": "Password must start with an uppercase letter",
+    "password_special": "Password must include at least one special character",
+    "password_mismatch": "Passwords don't match",
+    "mnemonic_incorrect": "Incorrect words. Please check and try again."
+  },
+  "success": {
+    "title": "Success",
+    "transactionSent": "Transaction sent successfully!",
+    "walletCreated": "Wallet created successfully"
+  },
+  "empty": {
+    "list": "No data found.",
+    "transactions": "No transaction yet.",
+    "nft": "No NFT yet.",
+    "tokens": "No Tokens yet.",
+    "notification": "You do not have any notifications."
+  }
 }

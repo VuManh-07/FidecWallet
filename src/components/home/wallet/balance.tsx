@@ -13,7 +13,7 @@ export default function Balance() {
   return (
     <View className="my-10 flex-row justify-end">
       <View
-        className="w-1/2 items-center border bg-neutral-200 shadow-lg dark:bg-neutral-800"
+        className="w-1/2 items-center bg-zinc-200 shadow-lg dark:bg-neutral-800"
         style={{
           borderTopLeftRadius: WIDTH(8),
           borderBottomLeftRadius: WIDTH(8),

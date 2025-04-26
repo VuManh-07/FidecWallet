@@ -15,7 +15,7 @@ export const PhoneItem = ({ iconColor }: Props) => {
   const sizeIcon = getSizeIconInProfile();
   return (
     <Item
-      title="profiles.information.phone"
+      title="profile.information.phone"
       icon={<PhoneIcon color={iconColor} width={sizeIcon} height={sizeIcon} />}
       value={phone}
       isShowIconVerified={true}

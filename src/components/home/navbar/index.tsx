@@ -20,14 +20,14 @@ export default function TabNavigator() {
   const layout = useWindowDimensions();
   const [index, setIndex] = useState(0);
   const [routes] = useState([
-    { key: 'transactions', title: translate('home.transactions') },
-    { key: 'token', title: translate('home.token') },
-    { key: 'nft', title: translate('home.nft') },
+    { key: 'transactions', title: translate('common.transaction') },
+    { key: 'token', title: 'Token' },
+    { key: 'nft', title: 'NFT' },
   ]);
 
   useEffect(() => {
     console.log(index, routes[index].key);
-  }, [index]);
+  }, [index, routes]);
 
   return (
     <View className="mt-2 flex-1">

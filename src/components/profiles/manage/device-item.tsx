@@ -15,8 +15,8 @@ export const DeviceItem = ({ iconColor }: Props) => {
   return (
     <Item
       icon={<DeviceIcon color={iconColor} width={sizeIcon} height={sizeIcon} />}
-      title="profiles.manage.device_management"
-      value={translate('profiles.manage.device_management_desc')}
+      title="profile.manage.device_management"
+      value={translate('profile.manage.device_management_desc')}
       isValueOpacity={true}
       onPress={() => {}}
     />

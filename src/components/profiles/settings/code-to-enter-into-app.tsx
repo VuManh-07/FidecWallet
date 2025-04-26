@@ -15,8 +15,8 @@ export const CodeToEnterIntoApp = ({ iconColor }: Props) => {
   return (
     <Item
       icon={<CodeIcon color={iconColor} width={sizeIcon} height={sizeIcon} />}
-      title="profiles.settings.code_to_enter"
-      value={translate('profiles.settings.code_to_enter_desc')}
+      title="profile.settings.code_to_enter"
+      value={translate('profile.settings.code_to_enter_desc')}
       isValueOpacity={true}
       onPress={() => {}}
     />

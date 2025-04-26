@@ -1,5 +1,6 @@
 import React from 'react';
-import { Image, Text, View } from 'react-native';
+
+import { Image, Text, View } from '@/components/ui';
 
 type Props = {
   logo?: string;
@@ -29,7 +30,9 @@ export default function Item({
       />
       <View className="flex-1">
         <Text className="text-xm font-bold">{name}</Text>
-        <Text className="my-1 text-xs text-gray-400">{address}</Text>
+        <Text className="my-1 text-xs text-gray-400 dark:text-gray-400">
+          {address}
+        </Text>
       </View>
       <View className="items-end">
         <Text className="text-sm font-bold">{price}</Text>

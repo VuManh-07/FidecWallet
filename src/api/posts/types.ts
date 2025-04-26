@@ -1,6 +1,14 @@
 export type Post = {
-  userId: number;
-  id: number;
-  title: string;
-  body: string;
+  id: string;
+  username: string;
+  avatar: string;
+  isBullish: boolean;
+  isVerified: boolean;
+  content: string;
+  tags?: string[];
+  images?: string[];
+  date: string;
+  likes: number;
+  comments: number;
+  shares: number;
 };

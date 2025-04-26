@@ -15,8 +15,8 @@ export const WalletconnectItem = ({ iconColor }: Props) => {
   return (
     <Item
       icon={<WalletIcon color={iconColor} width={sizeIcon} height={sizeIcon} />}
-      title="profiles.manage.walletconnect"
-      value={translate('profiles.manage.walletconnect_desc')}
+      title="profile.manage.walletconnect"
+      value={translate('profile.manage.walletconnect_desc')}
       isValueOpacity={true}
       onPress={() => {}}
     />

@@ -15,7 +15,7 @@ export const EmailItem = ({ iconColor }: Props) => {
   const sizeIcon = getSizeIconInProfile();
   return (
     <Item
-      title="profiles.information.email"
+      title="profile.information.email"
       icon={<EmailIcon color={iconColor} width={sizeIcon} height={sizeIcon} />}
       value={email}
       isShowIconVerified={true}

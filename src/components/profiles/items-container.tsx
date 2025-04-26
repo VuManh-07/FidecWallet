@@ -12,10 +12,7 @@ export const ItemsContainer = ({ children, title }: Props) => {
   return (
     <View>
       {title && (
-        <Text
-          className="my-1 text-base font-bold leading-tight dark:text-white"
-          tx={title}
-        />
+        <Text className="my-1 text-base font-bold leading-tight" tx={title} />
       )}
       {children}
     </View>

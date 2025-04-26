@@ -58,6 +58,7 @@ module.exports = {
   warning: {
     50: '#FFFBEB',
     100: '#FEF3C7',
+    150: '#9E9750',
     200: '#FDE68A',
     300: '#FCD34D',
     400: '#FBBF24',

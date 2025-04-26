@@ -38,10 +38,10 @@ export default function Post() {
 
   return (
     <View className="flex-1 p-3 ">
-      <Stack.Screen options={{ title: 'Post', headerBackTitle: 'Feed' }} />
+      {/* <Stack.Screen options={{ title: 'Post', headerBackTitle: 'Feed' }} />
       <FocusAwareStatusBar />
       <Text className="text-xl">{data.title}</Text>
-      <Text>{data.body} </Text>
+      <Text>{data.body} </Text> */}
     </View>
   );
 }

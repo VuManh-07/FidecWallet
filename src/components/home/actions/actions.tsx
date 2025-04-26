@@ -6,25 +6,31 @@ import {
 } from '@/components/ui/icons';
 import { translate } from '@/lib';
 
-export const actions = [
+export type ActionType = {
+  label: string;
+  icon: JSX.Element;
+  redirect: string;
+};
+
+export const actions: ActionType[] = [
   {
-    label: translate('home.buy'),
+    label: translate('common.buy'),
     icon: <BuyIcon color="#FBBF24" />,
-    onPress: () => console.log('Buy Pressed'),
+    redirect: '/home/buy',
   },
   {
-    label: translate('home.send'),
+    label: translate('common.send'),
     icon: <SendIcon color="#FBBF24" />,
-    onPress: () => console.log('Sent Pressed'),
+    redirect: '/home/send',
   },
   {
-    label: translate('home.scan'),
+    label: translate('common.scan'),
     icon: <ScanIcon color="#FBBF24" />,
-    onPress: () => console.log('Scan Pressed'),
+    redirect: '/home/scan',
   },
   {
-    label: translate('home.more'),
+    label: translate('common.more'),
     icon: <MoreIcon color="#FBBF24" />,
-    onPress: () => console.log('More Pressed'),
+    redirect: '/home/more',
   },
 ];

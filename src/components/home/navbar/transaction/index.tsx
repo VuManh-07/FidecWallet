@@ -1,90 +1,90 @@
-import { FlatList, TouchableOpacity, View } from '@/components/ui';
-import { Text } from '@/components/ui';
-import { translate } from '@/lib';
+import { useRouter } from 'expo-router';
 
-import Item from './item';
+import TransactionList from '@/components/transaction/transaction-list';
+import { type Transaction } from '@/types/wallet';
 
-type StatusType = 'Pending' | 'Confirmed' | 'Canceled';
-
-const transactions: {
-  id: string;
-  dateTime: string;
-  type: 'Send' | 'Receive';
-  status: StatusType;
-  amount: string;
-  amountInUsd: string;
-  currency: string;
-}[] = [
+const transactions: Transaction[] = [
+  // ===== TODAY =====
   {
     id: '1',
-    dateTime: 'Mar 3 at 10:04am',
-    type: 'Send',
-    status: 'Pending', // ✅ Hợp lệ
-    amount: '0.04',
-    amountInUsd: '$9.578',
-    currency: 'BNB',
-  },
-  {
-    id: '2',
-    dateTime: 'Mar 3 at 10:04am',
+    dateTime: 'Apr 5 at 09:00am', // hôm nay
     type: 'Send',
     status: 'Pending',
     amount: '0.04',
     amountInUsd: '$9.578',
     currency: 'BNB',
   },
+
+  // ===== THIS WEEK =====
   {
-    id: '3',
-    dateTime: 'Mar 3 at 10:04am',
-    type: 'Send',
-    status: 'Confirmed', // ✅ Hợp lệ
-    amount: '0.04',
-    amountInUsd: '$9.578',
-    currency: 'BNB',
-  },
-  {
-    id: '4',
-    dateTime: 'Mar 3 at 10:04am',
-    type: 'Send',
-    status: 'Canceled', // ✅ Hợp lệ
-    amount: '0.04',
-    amountInUsd: '$9.578',
-    currency: 'BNB',
-  },
-  {
-    id: '5',
-    dateTime: 'Mar 3 at 10:04am',
+    id: '2',
+    dateTime: 'Apr 3 at 10:30am', // 2 ngày trước
     type: 'Receive',
     status: 'Confirmed',
-    amount: '0.04',
-    amountInUsd: '$9.578',
+    amount: '0.1',
+    amountInUsd: '$23.4',
+    currency: 'ETH',
+  },
+
+  {
+    id: '3',
+    dateTime: 'Apr 1 at 05:15pm', // đầu tuần
+    type: 'Send',
+    status: 'Confirmed',
+    amount: '0.01',
+    amountInUsd: '$2.2',
+    currency: 'USDT',
+  },
+
+  // ===== THIS MONTH =====
+  {
+    id: '4',
+    dateTime: 'Mar 25 at 08:00am', // vẫn trong tháng 4 (ví dụ giả lập hôm nay là Apr 5)
+    type: 'Send',
+    status: 'Confirmed',
+    amount: '0.01',
+    amountInUsd: '$2.2',
+    currency: 'USDT',
+  },
+
+  {
+    id: '5',
+    dateTime: 'Mar 18 at 03:45pm',
+    type: 'Receive',
+    status: 'Confirmed',
+    amount: '0.5',
+    amountInUsd: '$125.0',
+    currency: 'BTC',
+  },
+
+  // ===== OLDER =====
+  {
+    id: '6',
+    dateTime: 'Feb 12 at 01:20pm',
+    type: 'Send',
+    status: 'Confirmed',
+    amount: '0.02',
+    amountInUsd: '$4.5',
+    currency: 'ETH',
+  },
+  {
+    id: '7',
+    dateTime: 'Apr 4 at 11:30am', // giả sử hôm nay là Apr 5
+    type: 'Send',
+    status: 'Confirmed',
+    amount: '0.15',
+    amountInUsd: '$30.0',
     currency: 'BNB',
   },
 ];
 
 export default function RecentTransactions() {
-  if (transactions.length === 0) {
-    return (
-      <View className="flex-1 bg-black p-4">
-        <Text className="px-2 py-4 text-center text-sm font-normal dark:text-yellow-400">
-          No transaction
-        </Text>
-      </View>
-    );
-  }
-
+  const route = useRouter();
   return (
-    <View className="mt-1 flex-1 px-3 dark:bg-black">
-      <FlatList
-        data={transactions}
-        renderItem={({ item }) => <Item {...item} />}
-        keyExtractor={(item) => item.id.toString()}
-      />
-      {transactions.length > 20 && (
-        <TouchableOpacity className="px-2 py-4 text-center text-sm font-normal text-yellow-600">
-          {translate('home.see_all')} {'>'}
-        </TouchableOpacity>
-      )}
-    </View>
+    <TransactionList
+      initialTransactions={transactions}
+      showSeeAll={transactions.length > 5}
+      onPressSeeAll={() => route.push('/home/transaction-all')}
+    />
   );
 }
